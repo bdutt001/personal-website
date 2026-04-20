@@ -1,0 +1,42 @@
+export default function NavFunc() {
+    return (
+        <div className='nav'>
+            <a
+                href='/'
+                className='nav-item'
+            >
+                Home
+            </a>
+            <a
+                href='/about'
+                className='nav-item'
+            >
+                About
+            </a>
+            <a
+                href='/projects'
+                className='nav-item'
+            >
+                Projects
+            </a>
+            <a
+                href='/resume'
+                className='nav-item'
+            >
+                Resume
+            </a>
+            <a
+                href='/blog'
+                className='nav-item'
+            >
+                Blog
+            </a>
+            <a
+                href='/contact'
+                className='nav-item'
+            >
+                Contact
+            </a>
+        </div>
+    );
+}
