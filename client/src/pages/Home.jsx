@@ -12,9 +12,24 @@ export default function Home()  {
                     optimized backend architectures.
                 </p>
                 <div className="buttons">
-                    <button>
-                        Experience & Education
-                    </button>
+                    <div className="row">
+                        <a
+                            href="/about"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="icon-button"
+                        >
+                            Education & Experience
+                        </a>
+                        <a
+                            href="/projects"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="icon-button"
+                        >
+                            View Projects
+                        </a>
+                    </div>
                 </div>
             </div>
             <img src={Photo}/>
