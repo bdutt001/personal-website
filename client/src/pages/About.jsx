@@ -17,11 +17,11 @@ export default function About()  {
                     <h1>Education</h1>
                     <div className="education">
                         <div className="ed-item">
-                            <div className="row">
+                            <div className="row-apart">
                                 <h2>B.S. in Computer Science</h2>
                                 <p className="date">Expected May 2026</p>
                             </div>
-                            <div className="row">
+                            <div className="row-apart">
                                 <h3>Old Dominion University</h3>
                                 <p>Norfolk, Virginia</p>
                             </div>
@@ -31,14 +31,15 @@ export default function About()  {
                             </div>
                         </div>
                          <div className="ed-item">
-                            <div className="row">
+                            <div className="row-apart">
                                 <h2>Advanced Diploma</h2>
                                 <p className="date">May 2019</p>
                             </div>
-                            <div className="row">
+                            <div className="row-apart">
                                 <h3>Western Branch High School</h3>
                                 <p>Chesapeake, Virginia</p>
                             </div>
+                            <p>GPA: 4.67</p>
                         </div>
                     </div>
                     
@@ -47,30 +48,54 @@ export default function About()  {
                     <h1>Experience</h1>
                     <div className="timeline">
                         <div className="timeline-item">
-                            <div className="row">
+                            <div className="row-apart">
                                 <h2>Web Developer</h2>
                                 <p className="date">January 2026 - Current</p>
                             </div>
-                            <div className="row">
+                            <h3>Grand Forge Games</h3>
+                            <p>Sole designer and developer of the official company website{" "}
+                                <a href="www.grandforgegames.com">
+                                    GrandForgeGames.com
+                                </a>
+                            </p>
+                            <h3>Responsibilities</h3>
+                            <ul>
+                                <li>
+                                    Create an intutive and cohesive visual design that reflects the brand
+                                </li>
+                                <li>
+                                    Implement interactive UI elements including animation, hero banners, and dynamic content sections
+                                </li>
+                                <li>
+                                    Build scalable component architecture for team members and projects using React
+                                </li>
+                                <li>
+                                    Ensure website responsiveness across various devices and browsers using modern CSS and media queries
+                                </li>
+                                
+                                
+                            </ul>
+                        </div>
+                        <div className="timeline-item">
+                            <div className="row-apart">
                                 <h2>Game Developer</h2>
                                 <p className="date">August 2025 - January 2026</p>
                             </div>
+
                             <h3>Grand Forge Games</h3>
+                            <p>
+                                Programmer for{" "}
+                                <a href="www.grandforgegames.com">
+                                    Project Forsaken
+                                </a>
+                            </p>
+                            <h3>Responsibilities</h3>
                             <ul>
                                 <li>
-                                    <p>Sole developer of the official company website{" "}
-                                        <a href="www.grandforgegames.com">
-                                            GrandForgeGames.com
-                                        </a>
-                                    </p>
+                                    Implement and debug game mechanics using Unreal Engine blueprints
                                 </li>
                                 <li>
-                                    <p>
-                                        Contributed to the development of{" "}
-                                        <a href="www.grandforgegames.com">
-                                            Project Forsaken
-                                        </a>
-                                    </p>
+                                    Collaborate with a team using Diversion for version control
                                 </li>
                             </ul>
                         </div>
@@ -82,7 +107,7 @@ export default function About()  {
                         <p>Years of Experience</p>
                     </div>
                     <div className="skill-item">
-                        <h2>Languages</h2>
+                        <h2>Programming Languages</h2>
                         <ul>
                             <li>
                                 <div className="row-apart">
