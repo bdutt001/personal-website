@@ -13,13 +13,13 @@ export default function About()  {
                 </p>
             </section>
             <div className="about-grid">
-                <div className="about-col 1">
+                <div className="about-col">
                     <h1>Education</h1>
                     <div className="education">
                         <div className="ed-item">
                             <div className="row-apart">
                                 <h2>B.S. in Computer Science</h2>
-                                <p className="date">Expected May 2026</p>
+                                <p className="date">May 2026</p>
                             </div>
                             <div className="row-apart">
                                 <h3>Old Dominion University</h3>
@@ -44,7 +44,7 @@ export default function About()  {
                     </div>
                     
                 </div>
-                <div className="about-col two">
+                <div className="about-col 2">
                     <h1>Experience</h1>
                     <div className="timeline">
                         <div className="timeline-item">
@@ -58,7 +58,7 @@ export default function About()  {
                                     GrandForgeGames.com
                                 </a>
                             </p>
-                            <h3>Responsibilities</h3>
+                            <h3 style={{color: "#9ca3af"}}>Responsibilities</h3>
                             <ul>
                                 <li>
                                     Create an intutive and cohesive visual design that reflects the brand
@@ -89,7 +89,7 @@ export default function About()  {
                                     Project Forsaken
                                 </a>
                             </p>
-                            <h3>Responsibilities</h3>
+                            <h3 style={{color: "#9ca3af"}}>Responsibilities</h3>
                             <ul>
                                 <li>
                                     Implement and debug game mechanics using Unreal Engine blueprints
@@ -145,7 +145,7 @@ export default function About()  {
                     <div className="skill-item">
                         <h2>Web & Mobile Development</h2>
                         <div className="skill-sub-item">
-                            <h3>Frontend</h3>
+                            <h3 style={{color: "#9ca3af"}}>Frontend</h3>
                             <ul>
                                 <li>
                                     <div className="row-apart">
@@ -168,7 +168,7 @@ export default function About()  {
                             </ul>
                         </div>
                         <div className="skill-sub-item">
-                            <h3>Backend</h3>
+                            <h3 style={{color: "#9ca3af"}}>Backend</h3>
                             <ul>
                                 <li>
                                     <div className="row-apart">
@@ -191,7 +191,7 @@ export default function About()  {
                             </ul>
                         </div>
                         <div className="skill-sub-item">
-                            <h3>Mobile</h3>
+                            <h3 style={{color: "#9ca3af"}}>Mobile</h3>
                             <ul>
                                 <li>
                                     <div className="row-apart">
@@ -205,7 +205,7 @@ export default function About()  {
                     <div className="skill-item">
                         <h2>Databases & Data Tools</h2>
                         <div className="skill-sub-item">
-                            <h3>Databases</h3>
+                            <h3 style={{color: "#9ca3af"}}>Databases</h3>
                             <ul>
                                 <li>
                                     <div className="row-apart">
@@ -222,7 +222,7 @@ export default function About()  {
                             </ul>
                         </div>
                         <div className="skill-sub-item">
-                            <h3>ORM</h3>
+                            <h3 style={{color: "#9ca3af"}}>ORM</h3>
                             <ul>
                                 <li>
                                     <div className="row-apart">
@@ -236,7 +236,7 @@ export default function About()  {
                     <div className="skill-item">
                         <h2>Developer Tools</h2>
                         <div className="skill-sub-item">
-                            <h3>Version Control</h3>
+                            <h3 style={{color: "#9ca3af"}}>Version Control</h3>
                             <ul>
                                 <li>
                                     <div className="row-apart">
@@ -253,7 +253,7 @@ export default function About()  {
                             </ul>
                         </div>
                         <div className="skill-sub-item">
-                            <h3>Containerization</h3>
+                            <h3 style={{color: "#9ca3af"}}>Containerization</h3>
                             <ul>
                                 <li>
                                     <div className="row-apart">
@@ -264,7 +264,7 @@ export default function About()  {
                             </ul>
                         </div>
                         <div className="skill-sub-item">
-                            <h3>Hosting</h3>
+                            <h3 style={{color: "#9ca3af"}}>Hosting</h3>
                             <ul>
                                 <li>
                                     <div className="row-apart">
@@ -297,7 +297,7 @@ export default function About()  {
                     <div className="skill-item">
                         <h2>Project Management</h2>
                         <div className="skill-sub-item">
-                            <h3>Methodologies</h3>
+                            <h3 style={{color: "#9ca3af"}}>Methodologies</h3>
                             <ul>
                                 <li>
                                     <div className="row-apart">
@@ -314,7 +314,7 @@ export default function About()  {
                             </ul>
                         </div>
                         <div className="skill-sub-item">
-                            <h3>Task Management</h3>
+                            <h3 style={{color: "#9ca3af"}}>Task Management</h3>
                             <ul>
                                 <li>
                                     <div className="row-apart">

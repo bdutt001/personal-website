@@ -59,6 +59,34 @@ export default function Projects() {
             ]
         },
         {
+            id: 5,
+            title: "Employee Monitoring Software",
+            type: "Website",
+            organization: "Old Dominion University",
+            descriptor: "COMM305 Literature Review Presentation",
+            team: "solo",
+            teamSize: 1,
+            status: "completed",
+            madeWith: [
+                "React",
+                "TypeScript",
+                "Node.js",
+                "Express",
+                "Render",
+                "PostrgreSQL",
+                "Clever Cloud",
+                "GitHub"
+            ],
+            description: [
+                "A full-stack web application that presents a literature review on employee monitoring software.",
+                "Features include tracking session and global activity, including actions (mouse movements and clicks) and idle time.",
+            ],
+            links: [
+                {text: "View Site", url: "https://bdutt001.github.io/ems-presentation/"},
+                {text: "GitHub Repo", url: "https://github.com/bdutt001/ems-presentation.git"}
+            ]
+        },
+        {
             id: 3,
             title: "Course Advising Portal",
             type: "Web Application",
@@ -109,25 +137,7 @@ export default function Projects() {
                 {text: "View Site", url: "https://grandforgegames.com/forsaken"},
             ]
         },
-        {
-            id: 5,
-            title: "Employee Monitoring Software",
-            type: "Website",
-            organization: "Old Dominion University",
-            descriptor: "COMM305 Literature Review Presentation",
-            team: "solo",
-            teamSize: 1,
-            status: "ongoing",
-            madeWith: [
-                "React",
-                "TypeScript",
-                "HTML",
-                "CSS",
-                "GitHub"
-            ],
-            description: [],
-            links: []
-        }
+        
     ];
 
     const [filters, setFilters] = useState({

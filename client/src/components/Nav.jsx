@@ -1,42 +1,12 @@
+import { Link } from "react-router-dom";
+
 export default function NavFunc() {
     return (
         <div className='nav'>
-            <a
-                href='/'
-                className='nav-item'
-            >
-                Home
-            </a>
-            <a
-                href='/about'
-                className='nav-item'
-            >
-                About
-            </a>
-            <a
-                href='/projects'
-                className='nav-item'
-            >
-                Projects
-            </a>
-            <a
-                href='/resume'
-                className='nav-item'
-            >
-                Resume
-            </a>
-            <a
-                href='/blog'
-                className='nav-item'
-            >
-                Blog
-            </a>
-            <a
-                href='/contact'
-                className='nav-item'
-            >
-                Contact
-            </a>
+            <Link to="/" className="nav-item">Home</Link>
+            <Link to="/about" className="nav-item">About</Link>
+            <Link to="/projects" className="nav-item">Projects</Link>
+            <Link to="/contact" className="nav-item">Contact</Link>
         </div>
     );
 }

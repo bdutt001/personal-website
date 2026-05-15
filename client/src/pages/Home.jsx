@@ -1,38 +1,46 @@
 import Photo from "../assets/Ben_D.png"
+import Terminal from "../components/Terminal";
 
 export default function Home()  {
     return (
-        <div className="home">
-            <div className="name-and-bio">
-                <h1>Benjamin Dutton</h1>
-                <p className="bio">
-                    Full-stack developer from Chesapeake, Virginia,
-                    building web and mobile applications with
-                    intuitive frontend designs and
-                    optimized backend architectures.
-                </p>
-                <div className="buttons">
-                    <div className="row">
-                        <a
-                            href="/about"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="icon-button"
-                        >
-                            Education & Experience
-                        </a>
-                        <a
-                            href="/projects"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="icon-button"
-                        >
-                            View Projects
-                        </a>
+        
+        <div className="landing">
+            <div className="home">
+            
+                <div className="home right">
+                    <Terminal></Terminal>
+                </div>
+                <div className="home left">
+                    <div className="name-and-bio">
+
+                        <img src={Photo} className="photo"/>
+                        <h2>Benjamin Dutton</h2>
+                        <div className="buttons">
+                            <div className="row">
+                                <a
+                                    href="/#/about"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="icon-button"
+                                >
+                                    About
+                                </a>
+                                <a
+                                    href="/#/projects"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="icon-button"
+                                >
+                                    Projects
+                                </a>
+                            </div>
+                        </div>
+            
                     </div>
                 </div>
+            
             </div>
-            <img src={Photo}/>
+              
         </div>
-    );
+          );
 }
