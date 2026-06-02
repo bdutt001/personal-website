@@ -282,7 +282,7 @@ select:hover {
 
 .home {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, .4fr);
   text-align: left;
   gap: 4rem;
 }
@@ -767,6 +767,7 @@ iframe {
 }
 
 .ascii-2 {
+  align-self: center;
   line-height: 1.25;
 }
 

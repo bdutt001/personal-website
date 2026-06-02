@@ -18,7 +18,11 @@ export default function Home()  {
                         <p>Chesapeake, Virginia</p>
                         <div className="row apart">
                             
-                            <p>bendutton9@gmail.com</p>
+                            <a
+                                href="mailto:bendutton9@gmail.com"
+                            >
+                                bendutton9@gmail.com
+                            </a>
                         </div>
                         {/* <div className="buttons">
                             <div className="row">

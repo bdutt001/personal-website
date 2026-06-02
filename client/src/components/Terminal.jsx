@@ -129,14 +129,14 @@ export default function Terminal() {
                             className="terminal-welcome"
                         >
                             <pre className="ascii-2 gradient">
-{`                                                  ████                                            
-                                                 ░░███                                            
-                         █████ ███ █████  ██████  ░███   ██████   ██████  █████████████    ██████ 
-                        ░░███ ░███░░███  ███░░███ ░███  ███░░███ ███░░███░░███░░███░░███  ███░░███
-                         ░███ ░███ ░███ ░███████  ░███ ░███ ░░░ ░███ ░███ ░███ ░███ ░███ ░███████ 
-                         ░░███████████  ░███░░░   ░███ ░███  ███░███ ░███ ░███ ░███ ░███ ░███░░░  
-                          ░░████░████   ░░██████  █████░░██████ ░░██████  █████░███ █████░░██████ 
-                           ░░░░ ░░░░     ░░░░░░  ░░░░░  ░░░░░░   ░░░░░░  ░░░░░ ░░░ ░░░░░  ░░░░░░  `}
+{`                          ████                                            
+                         ░░███                                            
+ █████ ███ █████  ██████  ░███   ██████   ██████  █████████████    ██████ 
+░░███ ░███░░███  ███░░███ ░███  ███░░███ ███░░███░░███░░███░░███  ███░░███
+ ░███ ░███ ░███ ░███████  ░███ ░███ ░░░ ░███ ░███ ░███ ░███ ░███ ░███████ 
+ ░░███████████  ░███░░░   ░███ ░███  ███░███ ░███ ░███ ░███ ░███ ░███░░░  
+  ░░████░████   ░░██████  █████░░██████ ░░██████  █████░███ █████░░██████ 
+   ░░░░ ░░░░     ░░░░░░  ░░░░░  ░░░░░░   ░░░░░░  ░░░░░ ░░░ ░░░░░  ░░░░░░  `}
                             </pre>
                             <p className="center white">
                                 Welcome to my portfolio.
@@ -200,50 +200,50 @@ export default function Terminal() {
                                 <pre className="ascii">
                                     <span className="white">{`
                                                          .###+.
-                                                       +##+   -+ 
-                                                     -###       +
+                                                       +##+   o+ 
+                                                     o###       +
                                                      ###
                                                      `}</span>
-                                                 {` `}<span className="white">{`'#`}</span>{`    -----.
+                                                 {` `}<span className="white">{`'#`}</span>{`    ooooo.
                                                  `}
-                                                 <span className="white">{`+###+`}</span> {`   ---.  .--
+                                                 <span className="white">{`+###+`}</span> {`   ooo.  .oo
                                                 `}
-                                                <span className="white">{`#######`}</span>{`  ---      ---   `}<span className="white">{`
-                                               ######### `}</span>{`.-'      '----. `}
+                                                <span className="white">{`#######`}</span>{`  ooo      ooo   `}<span className="white">{`
+                                               ######### `}</span>{`.o'      'oooo. `}
                                               <span className="white">{`
-                                              .#########.`}</span> -. <span className="white">{`####`}</span>{` .------.`}
+                                              .#########.`}</span> o. <span className="white">{`####`}</span>{` .oooooo.`}
                                               <span className="white">{`
-                                              -#########+`}</span>{` -. `}<span className="white">{`####`}</span>{` .--------.     `}
+                                              o#########+`}</span>{` o. `}<span className="white">{`####`}</span>{` .oooooooo.     `}
                                               <span className="white">{`
-                                              +#########+ `}</span>{`--      ----------.  `}
+                                              +#########+ `}</span>{`oo      oooooooooo.  `}
                                               <span className="white">{`
-                                              .#########-`}</span>{` ---   .------------.  `}
+                                              .#########o`}</span>{` ooo   .oooooooooooo.  `}
                                               <span className="white">{`
-                                               ######### `}</span>{`.-------------------- `}
+                                               ######### `}</span>{`.oooooooooooooooooooo `}
                                                <span className="white">{`
-                                                ####### `}</span>{` ---------------------   `}
-                                                <span className="white">{`
-                                             .-  ##### `}</span>{`  ---..-----------'''
-                                            .---       ----.
-                                           .-----.. .---------..         ...
-                                          .-------------------------------.
-                                         .-------------------------------
-                                         --------.  .------------------
-                                        -------   ..   ----------..
-                                       .-----  .------  ---------.
-                                       ----- .--------- -----------      `}<span className="white">{` ------------------ `}  </span> {`
-                                      ----. ----------- .---------.      `}<span className="white">{`+################## `}  </span> {`
-                                      ---..------------ .---------       `}<span className="white">{`##################   `}  </span> {`
-                                     .----------------- ---------       `}<span className="white">{`+##################                   `}  </span> {`
-                                     -----------------. --------.       `}<span className="white">{`##################.                          `}  </span> {`
-                                     ----------------- .-.---..        `}<span className="white">{`-##################                           `}  </span> {`
-                                     ---------------- .--              `}<span className="white">{`##################-                           `}  </span> {`
-                                     --------------.  ----...----.    `}<span className="white">{`-##################                            `}  </span> {`
-                                      -----------.    ----------      `}<span className="white">{`##################-                            `}  </span> {`
-                                      .----..          ------. .     `}<span className="white">{`-##################                             `}  </span> {`
-                                       .----....                     `}<span className="white">{`##################-                             `}  </span> {`
-                                         --------....
-                                           ..-----.        `}<span className="white">{`############################   `}</span>
+                                                ####### `}</span>{` ooooooooooooooooooooo   `}
+                                                {`
+                                             `}{`.o`}<span className="white">{`  ##### `}</span>{`  ooo~~ooooooooooo'''
+                                            .ooo       oooo.
+                                           .ooooo.. .ooooooooo..         ...
+                                          .ooooooooooooooooooooooooooooooo.
+                                         .ooooooooooooooooooooooooooooooo
+                                         oooooooo.  .oooooooooooooooooo
+                                        ooooooo   ..   oooooooooo..
+                                       .ooooo  .oooooo  ooooooooo.
+                                       ooooo .ooooooooo ooooooooooo      `}<span className="white">{` oooooooooooooooooo `}  </span> {`
+                                      oooo. ooooooooooo .ooooooooo.      `}<span className="white">{`+################## `}  </span> {`
+                                      ooo..oooooooooooo .ooooooooo       `}<span className="white">{`##################   `}  </span> {`
+                                     .ooooooooooooooooo ooooooooo       `}<span className="white">{`+##################                   `}  </span> {`
+                                     ooooooooooooooooo. oooooooo.       `}<span className="white">{`##################.                          `}  </span> {`
+                                     ooooooooooooooooo .o.ooo..        `}<span className="white">{`o##################                           `}  </span> {`
+                                     oooooooooooooooo .oo              `}<span className="white">{`##################o                           `}  </span> {`
+                                     oooooooooooooo.  oooo...oooo.    `}<span className="white">{`o##################                            `}  </span> {`
+                                      ooooooooooo.    oooooooooo      `}<span className="white">{`##################o                            `}  </span> {`
+                                      .oooo..          oooooo. .     `}<span className="white">{`o##################                             `}  </span> {`
+                                       .oooo....                     `}<span className="white">{`##################o                             `}  </span> {`
+                                         oooooooo....
+                                           ..ooooo.        `}<span className="white">{`############################   `}</span>
                                 </pre>
                                 <div className="fetch">
                                     <div>
