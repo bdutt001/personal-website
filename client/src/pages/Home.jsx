@@ -15,7 +15,12 @@ export default function Home()  {
 
                         <img src={Photo} className="photo"/>
                         <h2>Benjamin Dutton</h2>
-                        <div className="buttons">
+                        <p>Chesapeake, Virginia</p>
+                        <div className="row apart">
+                            
+                            <p>bendutton9@gmail.com</p>
+                        </div>
+                        {/* <div className="buttons">
                             <div className="row">
                                 <a
                                     href="/#/about"
@@ -34,7 +39,17 @@ export default function Home()  {
                                     Projects
                                 </a>
                             </div>
-                        </div>
+                            
+                            </div>*/}
+                            <a
+                                href="https://www.linkedin.com/in/benjamin-dutton-odu"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="social-button linkedin"
+                            >
+                            LinkedIn
+                            </a>
+                    
             
                     </div>
                 </div>

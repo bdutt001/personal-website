@@ -157,10 +157,10 @@ export default function Projects() {
     return (
         <div>
             <div className="projects">
-                <h1>Projects</h1>
+                
 
-                {/* FILTERS (no layout classnames changed) */}
                 <div className="row">
+                    <h1>Projects</h1>
                     <select onChange={(e) => setFilters({ ...filters, organization: e.target.value })}>
                         <option value="all">All Organizations</option>
                         <option value="Grand Forge Games">Grand Forge Games</option>
@@ -172,69 +172,59 @@ export default function Projects() {
                         <option value="solo">Solo</option>
                         <option value="team">Team</option>
                     </select>
-
-                    <select onChange={(e) => setFilters({ ...filters, status: e.target.value })}>
-                        <option value="all">All Statuses</option>
-                        <option value="ongoing">Ongoing</option>
-                        <option value="completed">Completed</option>
-                    </select>
                 </div>
 
-                {/* PROJECTS */}
-                {filteredProjects.map((project) => (
-                    <div className="project" key={project.id}>
-                        <div className="project-header">
-                            <div className="col">
-                                <h2>{project.title}</h2>
+                <div className="projectList">
+                    {filteredProjects.map((project) => (
+                        <div className="project" key={project.id}>
+                            <div className="project-header">
+                                <div className="col">
+                                    <h2>{project.title}</h2>
+                                    <div className="row">
+                                        <h3>{project.organization}</h3>
+                                        <p>{project.descriptor}</p>
+                                    </div>
+                                </div>
                                 <div className="row">
-                                    <h3>{project.organization}</h3>
-                                    <p>{project.descriptor}</p>
+                                    <p className="tag">{project.type}</p>
+                                    <p className="tag">
+                                        {project.team === "solo" ? "Solo" : `Team (${project.teamSize})`}
+                                    </p>
+                                    <p className={`tag ${project.status === "ongoing" ? "ongoing" : ""}`}>
+                                        {project.status === "ongoing" ? "Ongoing" : "Completed"}
+                                    </p>
                                 </div>
                             </div>
-
-                            <div className="row">
-                                <p className="tag">{project.type}</p>
-                                <p className="tag">
-                                    {project.team === "solo" ? "Solo" : `Team (${project.teamSize})`}
-                                </p>
-                                <p className={`tag ${project.status === "ongoing" ? "ongoing" : ""}`}>
-                                    {project.status === "ongoing" ? "Ongoing" : "Completed"}
-                                </p>
+                            {project.description.map((text, i) => (
+                                <p key={i}>{text}</p>
+                            ))}
+                            {project.links && project.links.length > 0 && (
+                                <div className="row">
+                                    {project.links.map((link, index) => (
+                                        <a
+                                            key={index}
+                                            href={link.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="icon-button"
+                                        >
+                                            {link.text}
+                                        </a>
+                                    ))}
+                                </div>
+                            )}
+                            <div className="col list">
+                                <h4>Made With:</h4>
+                                <ul className="made-with">
+                                    {project.madeWith.map((tech, index) => (
+                                        <li key={index}>{tech}</li>
+                                    ))}
+                                </ul>
                             </div>
+                    
                         </div>
-
-                        {project.description.map((text, i) => (
-                            <p key={i}>{text}</p>
-                        ))}
-
-                        {project.links && project.links.length > 0 && (
-                            <div className="row">
-                                {project.links.map((link, index) => (
-                                    <a
-                                        key={index}
-                                        href={link.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="icon-button"
-                                    >
-                                        {link.text}
-                                    </a>
-                                ))}
-                            </div>
-                        )}
-
-                        <div className="col list">
-                            <h4>Made With:</h4>
-                            <ul className="made-with">
-                                {project.madeWith.map((tech, index) => (
-                                    <li key={index}>{tech}</li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     );

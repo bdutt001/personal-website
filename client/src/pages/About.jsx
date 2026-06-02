@@ -1,17 +1,6 @@
 export default function About()  {
     return (
         <div className="about">
-            <section className="section">
-                <h1>
-                    About
-                </h1>
-                <p>
-                    I am a full-stack developer with experience
-                    creating web and mobile applications.
-                    I am eager to learn new skills that will further
-                    my ability to create the best user experience possible.
-                </p>
-            </section>
             <div className="about-grid">
                 <div className="about-col">
                     <h1>Education</h1>
@@ -26,8 +15,8 @@ export default function About()  {
                                 <p>Norfolk, Virginia</p>
                             </div>
                             <div>
-                                <p>GPA: 3.04</p>
-                                <p>In-Major GPA: 3.70</p>
+                                <p>GPA: 3.11</p>
+                                <p>In-Major GPA: 3.73</p>
                             </div>
                         </div>
                          <div className="ed-item">
@@ -44,7 +33,7 @@ export default function About()  {
                     </div>
                     
                 </div>
-                <div className="about-col 2">
+                <div className="about-col">
                     <h1>Experience</h1>
                     <div className="timeline">
                         <div className="timeline-item">
@@ -79,7 +68,7 @@ export default function About()  {
                         <div className="timeline-item">
                             <div className="row-apart">
                                 <h2>Game Developer</h2>
-                                <p className="date">August 2025 - January 2026</p>
+                                <p className="date">August 2025 - Current</p>
                             </div>
 
                             <h3>Grand Forge Games</h3>
@@ -101,252 +90,254 @@ export default function About()  {
                         </div>
                     </div>
                 </div>
-                <div className="about-col 3">
+                <div className="about-col">
                     <div className="row-apart">
                         <h1>Skills</h1>
                         <p>Years of Experience</p>
                     </div>
-                    <div className="skill-item">
-                        <h2>Programming Languages</h2>
-                        <ul>
-                            <li>
-                                <div className="row-apart">
-                                    <p>Java</p>
-                                    <p>9</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="row-apart">
-                                    <p>C++</p>
-                                    <p>7</p>
-                                </div>
-                            </li>
-                            
-                            <li>
-                                <div className="row-apart">
-                                    <p>Python</p>
-                                    <p>3</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="row-apart">
-                                    <p>JavaScript</p>
-                                    <p>2</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="row-apart">
-                                    <p>TypeScript</p>
-                                    <p>1</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="skill-item">
-                        <h2>Web & Mobile Development</h2>
-                        <div className="skill-sub-item">
-                            <h3 style={{color: "#9ca3af"}}>Frontend</h3>
+                    <div className="skills">
+                        <div className="skill-item">
+                            <h2>Programming Languages</h2>
                             <ul>
                                 <li>
                                     <div className="row-apart">
-                                        <p>HTML</p>
-                                        <p>3</p>
+                                        <p>Java</p>
+                                        <p>9</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="row-apart">
-                                        <p>CSS</p>
-                                        <p>3</p>
+                                        <p>C++</p>
+                                        <p>7</p>
                                     </div>
                                 </li>
-                                <li>
-                                    <div className="row-apart">
-                                        <p>React</p>
-                                        <p>1</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="skill-sub-item">
-                            <h3 style={{color: "#9ca3af"}}>Backend</h3>
-                            <ul>
-                                <li>
-                                    <div className="row-apart">
-                                        <p>Node.js</p>
-                                        <p>1</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="row-apart">
-                                        <p>Express</p>
-                                        <p>1</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="row-apart">
-                                        <p>Rest APIs</p>
-                                        <p>{"< "}1</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="skill-sub-item">
-                            <h3 style={{color: "#9ca3af"}}>Mobile</h3>
-                            <ul>
-                                <li>
-                                    <div className="row-apart">
-                                        <p>Expo</p>
-                                        <p>1</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="skill-item">
-                        <h2>Databases & Data Tools</h2>
-                        <div className="skill-sub-item">
-                            <h3 style={{color: "#9ca3af"}}>Databases</h3>
-                            <ul>
-                                <li>
-                                    <div className="row-apart">
-                                        <p>PostgreSQL</p>
-                                        <p>1</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="row-apart">
-                                        <p>MySQL</p>
-                                        <p>{"< "}1</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="skill-sub-item">
-                            <h3 style={{color: "#9ca3af"}}>ORM</h3>
-                            <ul>
-                                <li>
-                                    <div className="row-apart">
-                                        <p>Prisma</p>
-                                        <p>1</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="skill-item">
-                        <h2>Developer Tools</h2>
-                        <div className="skill-sub-item">
-                            <h3 style={{color: "#9ca3af"}}>Version Control</h3>
-                            <ul>
-                                <li>
-                                    <div className="row-apart">
-                                        <p>GitHub</p>
-                                        <p>6</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="row-apart">
-                                        <p>Git</p>
-                                        <p>4</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="skill-sub-item">
-                            <h3 style={{color: "#9ca3af"}}>Containerization</h3>
-                            <ul>
-                                <li>
-                                    <div className="row-apart">
-                                        <p>Docker</p>
-                                        <p>1</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="skill-sub-item">
-                            <h3 style={{color: "#9ca3af"}}>Hosting</h3>
-                            <ul>
-                                <li>
-                                    <div className="row-apart">
-                                        <p>GitHub Pages</p>
-                                        <p>3</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="row-apart">
-                                        <p>Firebase</p>
-                                        <p>{"< "}1</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="row-apart">
-                                        <p>Render</p>
-                                        <p>{"< "}1</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="row-apart">
-                                        <p>Clever Cloud</p>
-                                        <p>{"< "}1</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
                         
-                    </div>
-                    <div className="skill-item">
-                        <h2>Project Management</h2>
-                        <div className="skill-sub-item">
-                            <h3 style={{color: "#9ca3af"}}>Methodologies</h3>
-                            <ul>
                                 <li>
                                     <div className="row-apart">
-                                        <p>Agile (Scrum)</p>
-                                        <p>1</p>
+                                        <p>Python</p>
+                                        <p>3</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="row-apart">
-                                        <p>Sprint planning</p>
-                                        <p>1</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="skill-sub-item">
-                            <h3 style={{color: "#9ca3af"}}>Task Management</h3>
-                            <ul>
-                                <li>
-                                    <div className="row-apart">
-                                        <p>GitHub Issues</p>
+                                        <p>JavaScript</p>
                                         <p>2</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="row-apart">
-                                        <p>Trello</p>
+                                        <p>TypeScript</p>
                                         <p>1</p>
                                     </div>
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                    <div className="skill-item">
-                        <h2>Game Development</h2>
-                        <ul>
-                            <li>
-                                <div className="row-apart">
-                                    <p>Unreal Engine</p>
-                                    <p>{"< "}1</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="row-apart">
-                                    <p>Diversion</p>
-                                    <p>{"< "}1</p>
-                                </div>
-                            </li>
-                        </ul>
+                        <div className="skill-item">
+                            <h2>Web & Mobile Development</h2>
+                            <div className="skill-sub-item">
+                                <h3 style={{color: "#9ca3af"}}>Frontend</h3>
+                                <ul>
+                                    <li>
+                                        <div className="row-apart">
+                                            <p>HTML</p>
+                                            <p>3</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="row-apart">
+                                            <p>CSS</p>
+                                            <p>3</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="row-apart">
+                                            <p>React</p>
+                                            <p>1</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="skill-sub-item">
+                                <h3 style={{color: "#9ca3af"}}>Backend</h3>
+                                <ul>
+                                    <li>
+                                        <div className="row-apart">
+                                            <p>Node.js</p>
+                                            <p>1</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="row-apart">
+                                            <p>Express</p>
+                                            <p>1</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="row-apart">
+                                            <p>Rest APIs</p>
+                                            <p>{"< "}1</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="skill-sub-item">
+                                <h3 style={{color: "#9ca3af"}}>Mobile</h3>
+                                <ul>
+                                    <li>
+                                        <div className="row-apart">
+                                            <p>Expo</p>
+                                            <p>1</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="skill-item">
+                            <h2>Databases & Data Tools</h2>
+                            <div className="skill-sub-item">
+                                <h3 style={{color: "#9ca3af"}}>Databases</h3>
+                                <ul>
+                                    <li>
+                                        <div className="row-apart">
+                                            <p>PostgreSQL</p>
+                                            <p>1</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="row-apart">
+                                            <p>MySQL</p>
+                                            <p>{"< "}1</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="skill-sub-item">
+                                <h3 style={{color: "#9ca3af"}}>ORM</h3>
+                                <ul>
+                                    <li>
+                                        <div className="row-apart">
+                                            <p>Prisma</p>
+                                            <p>1</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="skill-item">
+                            <h2>Developer Tools</h2>
+                            <div className="skill-sub-item">
+                                <h3 style={{color: "#9ca3af"}}>Version Control</h3>
+                                <ul>
+                                    <li>
+                                        <div className="row-apart">
+                                            <p>GitHub</p>
+                                            <p>6</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="row-apart">
+                                            <p>Git</p>
+                                            <p>4</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="skill-sub-item">
+                                <h3 style={{color: "#9ca3af"}}>Containerization</h3>
+                                <ul>
+                                    <li>
+                                        <div className="row-apart">
+                                            <p>Docker</p>
+                                            <p>1</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="skill-sub-item">
+                                <h3 style={{color: "#9ca3af"}}>Hosting</h3>
+                                <ul>
+                                    <li>
+                                        <div className="row-apart">
+                                            <p>GitHub Pages</p>
+                                            <p>3</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="row-apart">
+                                            <p>Firebase</p>
+                                            <p>{"< "}1</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="row-apart">
+                                            <p>Render</p>
+                                            <p>{"< "}1</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="row-apart">
+                                            <p>Clever Cloud</p>
+                                            <p>{"< "}1</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        
+                        </div>
+                        <div className="skill-item">
+                            <h2>Project Management</h2>
+                            <div className="skill-sub-item">
+                                <h3 style={{color: "#9ca3af"}}>Methodologies</h3>
+                                <ul>
+                                    <li>
+                                        <div className="row-apart">
+                                            <p>Agile (Scrum)</p>
+                                            <p>1</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="row-apart">
+                                            <p>Sprint planning</p>
+                                            <p>1</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="skill-sub-item">
+                                <h3 style={{color: "#9ca3af"}}>Task Management</h3>
+                                <ul>
+                                    <li>
+                                        <div className="row-apart">
+                                            <p>GitHub Issues</p>
+                                            <p>2</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="row-apart">
+                                            <p>Trello</p>
+                                            <p>1</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="skill-item">
+                            <h2>Game Development</h2>
+                            <ul>
+                                <li>
+                                    <div className="row-apart">
+                                        <p>Unreal Engine</p>
+                                        <p>{"< "}1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="row-apart">
+                                        <p>Diversion</p>
+                                        <p>{"< "}1</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

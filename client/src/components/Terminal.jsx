@@ -52,31 +52,16 @@ export default function Terminal() {
         switch (trimmed.toLowerCase()) {
 
             case "help":
-                const commands = [
-                    "help:       list available commands",
-                    "about:      learn more about me",
-                    "projects:   view featured projects",
-                    "skills:     view technical skills",
-                    "contact:   contact information",
-                    "fastfetch:  system information",
-                    "clear:      clear terminal history",
-                ]
-
-                commands.forEach((command) => {
-                    newLines.push({
-                        id: crypto.randomUUID(),
-                        type: "text",
-                        text: command,
-                    })
-                })
-
-                break
-
-            case "about":
                 newLines.push({
                     id: crypto.randomUUID(),
-                    type: "text",
-                    text: "Software developer based in Chesapeake, Virginia."
+                    type: "help",
+                })
+                break
+
+            case "contact":
+                newLines.push({
+                    id: crypto.randomUUID(),
+                    type: "contact"
                 })
                 break
 
@@ -88,13 +73,12 @@ export default function Terminal() {
                 })
                 break
 
-            case "fastfetch":
+            case "fastfetch","stack":
                 newLines.push({
                     id: crypto.randomUUID(),
                     type: "fastfetch",
                 })
                 break
-        
             
 
             case "clear":
@@ -157,13 +141,53 @@ export default function Terminal() {
                             <p className="center white">
                                 Welcome to my portfolio.
                             </p>
-                            <p className="center white">
-                                I am a software developer based in Chesapeake, Virginia.
-                            </p>
+                            
 
                             <p>
-                                Type <span className="accent">help</span> to view commands.
+                                Enter <span className="accent">help</span> to view commands.
                             </p>
+                        </div>
+                    )
+                }
+
+                if (line.type === "contact") {
+                    return (
+                        <div key={line.id}>
+                            <div className="help">
+                                <div>
+                                    <p>Email:</p>
+                                    <p>Phone:</p>
+                                </div>
+                                <div>
+                                    <p>bendutton9@gmail.com</p>
+                                    <p>(757) 567-4771</p>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                }
+
+                if (line.type === "help") {
+                    return (
+                        <div key={line.id}>
+                            
+                            <p>Available commands: </p>
+                            <div className="help">
+                                <div>
+                                    
+                                    <p className="accent">clear</p>
+                                    <p className="accent">contact</p>
+                                    <p className="accent">stack</p>
+                                    <p className="accent">help</p>
+                                </div>
+                                <div>
+                                    <p>clear terminal history</p>
+                                    <p>view contact information</p>
+                                    <p>view development environment and tools</p>
+                                    <p>view available commands</p>
+                                </div>
+                            
+                            </div>
                         </div>
                     )
                 }
@@ -185,7 +209,7 @@ export default function Terminal() {
                                                  <span className="white">{`+###+`}</span> {`   ---.  .--
                                                 `}
                                                 <span className="white">{`#######`}</span>{`  ---      ---   `}<span className="white">{`
-                                               ######### `}</span>{`.-.      .----. `}
+                                               ######### `}</span>{`.-'      '----. `}
                                               <span className="white">{`
                                               .#########.`}</span> -. <span className="white">{`####`}</span>{` .------.`}
                                               <span className="white">{`
@@ -229,10 +253,6 @@ export default function Terminal() {
                                         <p className="white">----------------</p>
                                     </div>
                                     <div className="trow nowrap">
-                                        <p className="accent">Editor:</p>
-                                        <p className="white">VS Code</p>
-                                    </div>
-                                    <div className="trow nowrap">
                                         <p className="accent">OS:</p>
                                         <p className="white">Arch Linux</p>
                                     </div>
@@ -241,8 +261,20 @@ export default function Terminal() {
                                         <p className="white">VS Code</p>
                                     </div>
                                     <div className="trow nowrap">
-                                        <p className="accent">Tech Stack:</p>
-                                        <p className="white">React, Node.js, PostgreSQL</p>
+                                        <p className="accent">Frontend:</p>
+                                        <p className="white">React, CSS</p>
+                                    </div>
+                                    <div className="trow nowrap">
+                                        <p className="accent">Backend:</p>
+                                        <p className="white">Node.js, Express</p>
+                                    </div>
+                                    <div className="trow nowrap">
+                                        <p className="accent">Database:</p>
+                                        <p className="white">PostgreSQL</p>
+                                    </div>
+                                    <div className="trow nowrap">
+                                        <p className="accent">Tools:</p>
+                                        <p className="white">Git, Docker</p>
                                     </div>
                                 </div>
                             </div>
