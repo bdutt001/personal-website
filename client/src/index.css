@@ -183,12 +183,6 @@ select {
   transition: box-shadow .25s ease-in-out;
 }
 
-/* button:hover,
-.icon-button:hover {
-  box-shadow: 0 .5rem 1rem 0 var(--accent-bg-hover);
-  text-decoration: underline;
-} */
-
 select:hover {
   box-shadow: 0 .5rem 1rem 0 var(--shadow);
   text-decoration: underline;
@@ -200,6 +194,16 @@ select:hover {
   gap: 1.5rem;
   align-items: baseline;
   flex-wrap: wrap;
+}
+
+.row-center {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .trow {
@@ -324,6 +328,8 @@ select:hover {
   max-width: 12rem;
   aspect-ratio: 1 / 1;
 
+  padding-bottom: .5rem;
+
   border-radius: 999px;
 }
 
@@ -331,8 +337,21 @@ select:hover {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  height: 60dvh;
+  max-height: 60vh;
+  height: 100%;
   align-items: center;
+}
+
+.name-and-photo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.name-and-title {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
 }
 
 .bio {
@@ -596,7 +615,7 @@ iframe {
 }
 /* #endregion */
 
-.icon {
+.header-icon {
   max-height: 10vh;
   width: auto;
   padding: 1rem 1rem;
@@ -789,13 +808,16 @@ p {
 }
 
 .social-button {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  justify-content: flex-start;
 
-  width: fit-content;
+  width: 3.5rem;
+  height: 3.5rem;
+  overflow: hidden;
 
-  padding: 1rem 1.5rem;
+  padding: 0 1rem;
 
   border: .2rem solid var(--border);
   border-radius: .75rem;
@@ -805,46 +827,44 @@ p {
 
   color: var(--text);
   text-decoration: none;
-  font-weight: 600;
 
   box-shadow: 0 .5rem 1rem 0 var(--shadow);
 
   transition:
-    transform .2s ease,
-    border-color .2s ease,
-    color .2s ease;
+    width .25s ease-in-out,
+    transform .2s ease-in-out,
+    border-color .2s ease-in-out;
 }
 
 .social-button:hover {
+  width: fit-content;
+  justify-content: flex-start;
+
+  border-color: var(--accent);
+  
+  color: var(--accent);
+
   transform: translateY(-2px);
-
-  color: var(--text-h);
-  border-color: var(--text-h);
-
-  text-decoration: none;
 }
 
-.linkedin::before {
-  content: "";
+.social-button span {
+  max-width: 0;
+  opacity: 0;
+  white-space: nowrap;
 
-  width: 1.25rem;
-  height: 1.25rem;
+  transition:
+    max-width .25s ease-in-out,
+    opacity .15s ease-in-out;
 
-  background-image: url("https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg");
-
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-
-  display: inline-block;
-
+  margin-left: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  .linkedin::before {
-    filter: invert(1);
-  }
+.social-button:hover span {
+  opacity: 1;
+  max-width: fit-content;
+  padding-left: 1rem;
 }
+
 
 @media (max-width: 1100px) {
 
@@ -978,22 +998,89 @@ p {
   }
 }
 
-.projectList {
+.projectList,
+.timeline,
+.skills {
+  flex: 1 1 0;
+  min-height: 0;
   max-height: 70dvh;
   overflow-y: auto;
+  padding-bottom: 1rem;
 }
 
 .about-grid > * {
   min-height: 0;
 }
 
-.timeline,
-.skills {
-  flex: 1 1 0;
-  min-height: 0;
-  overflow-y: auto;
-}
+
 
 .about-col > h1 {
   flex-shrink: 0;
+}
+
+.icon {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.icon.base {
+  opacity: 1;
+  transition: all .25s ease-in-out;
+}
+
+.icon.hover {
+  opacity: 0;
+  z-index: 1;
+}
+
+.social-button:hover .icon.base{
+  z-index: 0;
+}
+
+.social-button:hover .icon.hover{
+  opacity: 1;
+  transition: all .25s ease-in-out;
+}
+
+.icon-wrapper {
+  position: relative;
+
+  width: 1.25rem;
+  height: 1.25rem;
+
+  flex-shrink: 0;
+}
+
+.icon.inline {
+  position: relative;
+  padding-left: 0rem;
+  height: 1lh;
+  width: auto;
+}
+
+.bio-details {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+  justify-self: flex-start;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: left;
+  flex-wrap: wrap;
+}
+
+.more {
+  align-self: center;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
 }

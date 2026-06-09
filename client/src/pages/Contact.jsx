@@ -1,7 +1,7 @@
 export default function Contact()  {
     return (
         <div className="contact">
-            <h1>Contact</h1>
+            {/* <h1>Contact</h1>
                 <div className="contact-grid">
                     <div className="contact-col 1">
                         <div className="contact-item">
@@ -18,14 +18,6 @@ export default function Contact()  {
                         
                                 </div>
                             </div>
-                            {/* <div className="row-apart">
-                                <h3>Grand Forge Games</h3>
-                                <a
-                                    href="mailto:ben.dutton@grandforgegames.com"
-                                >
-                                    ben.dutton@grandforgegames.com
-                                </a>
-                            </div> */}
                         </div>
                     </div>
                     <div className="contact-col 2">
@@ -51,7 +43,7 @@ export default function Contact()  {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
         </div>
     );
 }

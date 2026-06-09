@@ -43,7 +43,7 @@ export default function About()  {
                             </div>
                             <h3>Grand Forge Games</h3>
                             <p>Sole designer and developer of the official company website{" "}
-                                <a href="www.grandforgegames.com">
+                                <a href="https://grandforgegames.com">
                                     GrandForgeGames.com
                                 </a>
                             </p>
@@ -74,7 +74,7 @@ export default function About()  {
                             <h3>Grand Forge Games</h3>
                             <p>
                                 Programmer for{" "}
-                                <a href="www.grandforgegames.com">
+                                <a href="https://grandforgegames.com/forsaken">
                                     Project Forsaken
                                 </a>
                             </p>
