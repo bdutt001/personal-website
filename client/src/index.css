@@ -345,12 +345,14 @@ select:hover {
 .name-and-photo {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
 }
 
 .name-and-title {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: .75rem;
 }
 
@@ -616,7 +618,7 @@ iframe {
 /* #endregion */
 
 .header-icon {
-  max-height: 10vh;
+  max-height: 10dvh;
   width: auto;
   padding: 1rem 1rem;
 }
@@ -1083,4 +1085,13 @@ p {
   display: flex;
   flex-direction: column;
   gap: .5rem;
+}
+
+.job-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: .35rem;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }

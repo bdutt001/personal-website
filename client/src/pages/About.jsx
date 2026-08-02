@@ -38,13 +38,24 @@ export default function About()  {
                     <div className="timeline">
                         <div className="timeline-item">
                             <div className="row-apart">
+                                <h2>Software Engineer</h2>
+                                <p className="date">July 2026 - Current</p>
+                            </div>
+                            <h3>WR Systems</h3>
+                            <p>
+                                
+                            </p>
+                            <h3 style={{color: "#9ca3af"}}>Responsibilities</h3>
+                        </div>
+                        <div className="timeline-item">
+                            <div className="row-apart">
                                 <h2>Web Developer</h2>
                                 <p className="date">January 2026 - Current</p>
                             </div>
                             <h3>Grand Forge Games</h3>
-                            <p>Sole designer and developer of the official company website{" "}
-                                <a href="https://grandforgegames.com">
-                                    GrandForgeGames.com
+                            <p>Sole developer of the official company website:{" "}
+                                <a href="https://grandforgegames.com" target="_blank" rel="noopener noreferrer">
+                                    Grand Forge Games
                                 </a>
                             </p>
                             <h3 style={{color: "#9ca3af"}}>Responsibilities</h3>
@@ -56,35 +67,10 @@ export default function About()  {
                                     Implement interactive UI elements including animation, hero banners, and dynamic content sections
                                 </li>
                                 <li>
-                                    Build scalable component architecture for team members and projects using React
+                                    Build scalable React components for team members and projects
                                 </li>
                                 <li>
                                     Ensure website responsiveness across various devices and browsers using modern CSS and media queries
-                                </li>
-                                
-                                
-                            </ul>
-                        </div>
-                        <div className="timeline-item">
-                            <div className="row-apart">
-                                <h2>Game Developer</h2>
-                                <p className="date">August 2025 - Current</p>
-                            </div>
-
-                            <h3>Grand Forge Games</h3>
-                            <p>
-                                Programmer for{" "}
-                                <a href="https://grandforgegames.com/forsaken">
-                                    Project Forsaken
-                                </a>
-                            </p>
-                            <h3 style={{color: "#9ca3af"}}>Responsibilities</h3>
-                            <ul>
-                                <li>
-                                    Implement and debug game mechanics using Unreal Engine blueprints
-                                </li>
-                                <li>
-                                    Collaborate with a team using Diversion for version control
                                 </li>
                             </ul>
                         </div>

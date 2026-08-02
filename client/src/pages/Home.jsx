@@ -29,8 +29,11 @@ export default function Home()  {
                             <img src={Photo} className="photo"/>
                             <div className="name-and-title">
                                 <h2>Benjamin Dutton</h2>
-                                <div className="row-center">
-                                    <p>Software Engineer</p>
+                                <div className="job-row">
+                                    <p>Software Engineer at</p>
+                                    <a href="https://wrsystems.com/">
+                                        WR Systems
+                                    </a>
                                 </div>
                                 <div className="row-center">
                                     <p>B.S. in Computer Science</p>

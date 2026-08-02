@@ -5,30 +5,6 @@ export default function Projects() {
     const projects = [
         {
             id: 1,
-            title: "GrandForgeGames.com",
-            type: "Website",
-            organization: "Grand Forge Games",
-            descriptor: "Official Website",
-            team: "solo",
-            teamSize: 1,
-            status: "ongoing",
-            madeWith: [
-                "React",
-                "TypeScript",
-                "GitHub",
-                "Inkscape (Logo Design)"
-            ],
-            description: [
-                "The official company website for Grand Forge Games, an independent game studio based in Yorktown, Virginia. It showcases the Grand Forge Games brand, team members, and projects. Users can see content for upcoming games, including slideshows of in-game screenshots, concept art, and other assets. Users can also download playtests and give feedback.",
-                "The visual design is cohesive and responsive, ensuring usability across devices.",
-            ],
-            links: [
-                {text: "View Site", url: "https://grandforgegames.com"},
-                {text: "GitHub Repo", url: "https://github.com/bdutt001/grandforgegames.git"},
-            ]
-        },
-        {
-            id: 2,
             title: "MingleMap",
             type: "Mobile Application",
             organization: "Old Dominion University",
@@ -53,11 +29,36 @@ export default function Projects() {
                 "Safety features include user reporting, moderation review, and account bans for inappropriate behavior."
             ],
             links: [
-                {text: "View Demo", url: "https://github.com/bdutt001/f25-Iron.git"},
+                {text: "Demo", url: "https://github.com/bdutt001/f25-Iron.git"},
                 {text: "GitHub Repo", url: "https://github.com/bdutt001/f25-Iron.git"},
-                {text: "Documentation", url: "https://github.com/bdutt001/f25-Iron.git"},
+                {text: "Documentation", url: "https://drive.google.com/drive/folders/1TahLLeh38Z2o95-4c3TNyfYTKyVLz-Dm?usp=sharing"},
             ]
         },
+        {
+            id: 2,
+            title: "GrandForgeGames.com",
+            type: "Website",
+            organization: "Grand Forge Games",
+            descriptor: "Official Website",
+            team: "solo",
+            teamSize: 1,
+            status: "ongoing",
+            madeWith: [
+                "React",
+                "TypeScript",
+                "GitHub",
+                "Inkscape (Logo Design)"
+            ],
+            description: [
+                "The official company website for Grand Forge Games, an independent game studio based in Yorktown, Virginia. It showcases the Grand Forge Games brand, team members, and projects. Users can see content for upcoming games, including slideshows of in-game screenshots, concept art, and other assets. Users can also download playtests and give feedback.",
+                "The visual design is cohesive and responsive, ensuring usability across devices.",
+            ],
+            links: [
+                {text: "View Site", url: "https://grandforgegames.com"},
+                {text: "GitHub Repo", url: "https://github.com/bdutt001/grandforgegames.git"},
+            ]
+        },
+        
         {
             id: 5,
             title: "Employee Monitoring Software",
@@ -94,7 +95,7 @@ export default function Projects() {
             descriptor: "CS418 Semester Project",
             team: "solo",
             teamSize: 1,
-            status: "ongoing",
+            status: "completed",
             madeWith: [
                 "React",
                 "JavaScript",
