@@ -1,4 +1,7 @@
 import Nav from "./Nav";
+
+import './header.css';
+
 import Icon from "../assets/favicon.svg";
 
 export default function Header() {

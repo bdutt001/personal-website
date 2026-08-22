@@ -1,9 +1,10 @@
+import './home.css'
+
+import { Link } from 'react-router-dom';
+
 import Terminal from "../components/Terminal";
 
 import Photo from "../assets/Ben_D.png";
-
-import PinIcon from "../assets/pin.svg";
-import CapIcon from "../assets/cap.svg";
 
 import EmailIcon from "../assets/email.svg"
 import EmailIconHover from "../assets/email-hover.svg"
@@ -14,50 +15,34 @@ import GithubIconHover from "../assets/github-hover.svg";
 
 
 export default function Home()  {
-    return (
-        
+    return ( 
         <div className="landing">
             <div className="home">
-            
-                <div className="home right">
+                <div className="home left">
                     <Terminal></Terminal>
                 </div>
-                <div className="home left">
-                    <div className="name-and-bio">
-
-                        <div className="name-and-photo">
-                            <img src={Photo} className="photo"/>
-                            <div className="name-and-title">
+                <div className="home right">
+                    <div className="profile">
+                        <div className="profile__content">
+                            <img src={Photo} className="profile__photo"/>
+                            <div className="profile__name">
                                 <h2>Benjamin Dutton</h2>
                                 <div className="job-row">
-                                    <p>Software Engineer at</p>
+                                    <Link to="/about#job--wr" className='job__role'>Software Engineer</Link>
+                                    <p>at</p>
                                     <a href="https://wrsystems.com/">
                                         WR Systems
                                     </a>
                                 </div>
-                                <div className="row-center">
-                                    <p>B.S. in Computer Science</p>
-                                </div>
-                            </div>
-                            {/* <div className="row-center">
-                                    <a href="#about">
-                                        More
+                                <div className="job-row">
+                                    <Link to="/about#job--gfg" className='job__role'>Web Developer</Link>
+                                    <p>at</p>
+                                    <a href="https://grandforgegames.com/">
+                                        Grand Forge Games
                                     </a>
-                            </div> */}
-                        </div>
-                        {/* <div className="description">
-                            <div className="bio-details">
-                                <div className="detail">
-                                    <img src={CapIcon} className="icon inline"/>
-                                    <img src={PinIcon} className="icon inline"/>
-                                </div>
-                                <div className="detail">
-                                    <p>B.S. in Computer Science</p>
-                                    <p>Chesapeake, Virginia</p>
                                 </div>
                             </div>
-                            
-                        </div> */}
+                        </div>
                         <div className="row-center">
                             <a
                                 href="mailto:bendutton9@gmail.com"

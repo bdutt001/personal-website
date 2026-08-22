@@ -9,7 +9,6 @@
   z-index: -1;
 }
 
-/* Base blob style */
 .blob {
     position: absolute;
     width: 70vw;
@@ -20,8 +19,7 @@
     mix-blend-mode: screen;
 }
 
-/* Variations */
-.blob1 {
+.green {
     width: 70vw;
     height: 75vh;
     top: -10%;
@@ -30,7 +28,7 @@
     animation: float 7s ease-in-out infinite alternate;
 }
 
-.blob2 {
+.blue {
     width: 80vw;
     height: 75vh;
     top: 15%;
@@ -39,7 +37,7 @@
     animation: float 13s ease-in-out infinite alternate;
 }
 
-.blob3 {
+.yellow {
     top: 70%;
     left: 5%;
     background: radial-gradient(circle, #FFF799 0%, transparent 70%);
@@ -47,7 +45,6 @@
 }
 
 
-/* Floating animation */
 @keyframes float {
   0% {
     transform: translate(0px, 0px) scale(1);
@@ -55,6 +52,6 @@
   }
   100% {
     transform: translateY(-80px) scale(1.2);
-    opacity: .35;
+    opacity: .5;
   }
 }

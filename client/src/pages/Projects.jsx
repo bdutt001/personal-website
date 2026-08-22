@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './projects.css'
 
 export default function Projects() {
 

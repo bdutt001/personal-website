@@ -1,0 +1,105 @@
+.terminal {
+  font-family: "JetBrains Mono", monospace;
+  font-size: .75rem;
+  position: relative;
+  top: 0;
+
+  max-height: 60vh;
+  height: 100%;
+
+  overflow-y: auto;
+
+  padding: 2rem 2rem;
+  border: .2rem solid var(--border);
+  border-radius: 1rem;
+
+  background: var(--bg);
+
+  box-shadow:
+    0 0 40px var(--shadow);
+}
+
+.ascii {
+  font-family: "JetBrains Mono", monospace;
+
+  white-space: pre;
+  overflow: hidden;
+
+  font-size: 0.6rem;
+  line-height: 1;
+
+  margin: 0;
+  margin-left: -20rem;
+  margin-right: -15rem;
+  letter-spacing: 4px;
+
+  color: var(--accent);
+  user-select: none;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.white {
+  color: var(--text);
+}
+
+.nowrap{
+  text-wrap: nowrap;
+}
+
+.fetch{
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  gap: 1rem;
+}
+
+.gradient{
+  padding: .5rem;
+  color: transparent;
+  background: linear-gradient(to bottom, var(--text) 35%, var(--accent)65%);
+  background-clip: text;
+}
+
+.terminal-input-line {
+  align-items: center;
+  gap: 1rem;
+
+  flex-wrap: nowrap;
+}
+
+.terminal-input {
+  background: transparent;
+  border: none;
+  outline: none;
+
+  color: var(--text);
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: inherit;
+
+  width: 100%;
+}
+
+.terminal-welcome {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ascii-2 {
+  align-self: center;
+  line-height: 1.25;
+}

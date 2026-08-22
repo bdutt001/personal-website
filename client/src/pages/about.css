@@ -1,0 +1,127 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  
+  height: 100%;
+
+  padding: 2rem;
+  text-align: left;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr .8fr;
+  gap: 3rem;
+
+  
+  min-height: 100%;
+
+  align-items: stretch;
+}
+
+.about-col {
+  display: flex;
+  flex-direction: column;
+  padding: .5rem;
+  gap: 2rem;
+  min-width: 0;
+
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.help {
+  display: grid;
+  grid-template-columns: .2fr 1fr;
+  gap: 1rem;
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: stretch;
+  gap: 2rem;
+
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: stretch;
+  text-align: left;
+  gap: 2rem;
+
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 0;
+  
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.timeline-item,
+.ed-item,
+.skill-item,
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-right: 1rem;
+
+  padding: 2rem 2rem;
+  border: .2rem solid var(--border);
+  border-radius: 1rem;
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+}
+
+.skill-sub-item {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.about-col,
+.timeline,
+.education,
+.skill-item,
+.timeline-item,
+.ed-item {
+  min-width: 0;
+}
+
+@media (max-width: 1100px) {
+    .about {
+        display: flex;
+        overflow: scroll;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-col {
+        min-height: fit-content;
+        overflow: visible;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+}

@@ -1,0 +1,61 @@
+.typing {
+  --speed: 0.1s;
+
+  font-family: "JetBrains Mono", monospace;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid currentColor;
+}
+
+.typing.run {
+  animation:
+    typing calc(var(--chars) * var(--speed))
+      steps(var(--chars)) forwards,
+    cursor-hide 0s linear forwards;
+
+  animation-delay:
+    0s,
+    calc(var(--chars) * var(--speed));
+}
+
+.typing.idle {
+  width: auto;
+  border-right: 2px solid currentColor;
+  animation: 
+    cursor 1s step-end infinite;
+}
+
+.typing.done {
+  border-right: none;
+}
+
+.heading {
+  animation-delay: 0s;
+}
+
+.paragraph {
+  animation-delay: 1s;
+}
+
+@keyframes cursor-hide {
+  to {
+    border-right:none;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: calc(var(--chars) * 1ch);
+  }
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}

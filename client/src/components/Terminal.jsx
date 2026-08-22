@@ -1,3 +1,5 @@
+import './terminal.css';
+
 import { useEffect, useState } from "react"
 import TypingText from "./TypingText"
 
@@ -109,9 +111,8 @@ export default function Terminal() {
                             key={line.id}
                             className="trow nowrap"
                         >
-                            <p className="accent">
-                                ben@studio
-                                <span className="white">:~$ </span>
+                            <p className="white">
+                                [ben@studio ~]$&nbsp;
                             </p>
 
                             {line.animate ? (
@@ -247,7 +248,9 @@ export default function Terminal() {
                                 </pre>
                                 <div className="fetch">
                                     <div>
-                                        <p><span className="accent">ben</span><span className="white">@</span><span className="accent">studio</span></p>
+                                        <p className="accent">
+                                            ben<span className="white">@</span>studio
+                                        </p>
                                     </div>
                                     <div>
                                         <p className="white">----------------</p>
@@ -258,7 +261,11 @@ export default function Terminal() {
                                     </div>
                                     <div className="trow nowrap">
                                         <p className="accent">Editor:</p>
-                                        <p className="white">VS Code</p>
+                                        <p className="white">Vim</p>
+                                    </div>
+                                    <div className="trow nowrap">
+                                        <p className="accent">Shell:</p>
+                                        <p className="white">Bash</p>
                                     </div>
                                     <div className="trow nowrap">
                                         <p className="accent">Frontend:</p>
@@ -271,10 +278,6 @@ export default function Terminal() {
                                     <div className="trow nowrap">
                                         <p className="accent">Database:</p>
                                         <p className="white">PostgreSQL</p>
-                                    </div>
-                                    <div className="trow nowrap">
-                                        <p className="accent">Tools:</p>
-                                        <p className="white">Git, Docker</p>
                                     </div>
                                 </div>
                             </div>
@@ -300,9 +303,8 @@ export default function Terminal() {
 
             {bootComplete && (
                 <div className="trow nowrap terminal-input-line">
-                    <p className="accent">
-                        ben@studio
-                        <span className="white">:~$ </span>
+                    <p className="white">
+                        [ben@studio ~]$&nbsp;
                     </p>
 
                     <input

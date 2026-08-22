@@ -1,3 +1,5 @@
+import './about.css'
+
 export default function About()  {
     return (
         <div className="about">
@@ -36,26 +38,23 @@ export default function About()  {
                 <div className="about-col">
                     <h1>Experience</h1>
                     <div className="timeline">
-                        <div className="timeline-item">
+                        <div id="job--wr" className="timeline-item">
                             <div className="row-apart">
                                 <h2>Software Engineer</h2>
                                 <p className="date">July 2026 - Current</p>
                             </div>
                             <h3>WR Systems</h3>
-                            <p>
-                                
-                            </p>
-                            <h3 style={{color: "#9ca3af"}}>Responsibilities</h3>
+                            {/* <h3 style={{color: "#9ca3af"}}>Responsibilities</h3> */}
                         </div>
-                        <div className="timeline-item">
+                        <div id="job--gfg" className="timeline-item">
                             <div className="row-apart">
                                 <h2>Web Developer</h2>
                                 <p className="date">January 2026 - Current</p>
                             </div>
                             <h3>Grand Forge Games</h3>
-                            <p>Sole developer of the official company website:{" "}
+                            <p>Sole developer of the company website{" "}
                                 <a href="https://grandforgegames.com" target="_blank" rel="noopener noreferrer">
-                                    Grand Forge Games
+                                    View Website
                                 </a>
                             </p>
                             <h3 style={{color: "#9ca3af"}}>Responsibilities</h3>

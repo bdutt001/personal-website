@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: .75rem 2rem;
+
+  border-bottom: .2rem solid var(--border);
+
+  background: var(--glass-dark);
+  backdrop-filter: blur(10px) grayscale(30%);
+
+  flex-shrink: 0;
+}
