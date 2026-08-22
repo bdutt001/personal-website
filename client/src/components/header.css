@@ -7,8 +7,30 @@
 
   border-bottom: .2rem solid var(--border);
 
-  background: var(--glass-dark);
-  backdrop-filter: blur(10px) grayscale(30%);
+  background: var(--glass);
+  backdrop-filter: blur(10px) brightness(80%);
 
   flex-shrink: 0;
+}
+
+.header__title {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header__icon {
+  max-height: 10dvh;
+  width: auto;
+  padding: 1rem 1rem;
+}
+
+.header__column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  padding-top: 1rem;
 }

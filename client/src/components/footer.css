@@ -8,8 +8,8 @@
 
   border-top: .2rem solid var(--border);
 
-  background: var(--glass-dark);
-  backdrop-filter: blur(10px) grayscale(30%);
+  background: var(--glass);
+  backdrop-filter: blur(10px) brightness(75%);
 
   flex-shrink: 0;
 }

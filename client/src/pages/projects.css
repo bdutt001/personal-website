@@ -18,7 +18,7 @@
   border: .2rem solid var(--border);
   border-radius: 1rem;
   background: var(--glass);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px) brightness(75%);
 }
 
 .project-header {
@@ -69,7 +69,7 @@ select {
   box-shadow: 0 .5rem 1rem 0 var(--shadow);
 
   background: var(--glass);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px) brightness(75%);
 
   transition: box-shadow .25s ease-in-out;
 }
@@ -87,7 +87,7 @@ select::picker(select) {
   box-shadow: 0 .5rem 1rem 0 var(--shadow);
 
   background: var(--glass);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px) brightness(75%);
 }
 
 select:hover {

@@ -86,7 +86,7 @@
   border: .2rem solid var(--border);
   border-radius: 1rem;
   background: var(--glass);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px) brightness(75%);
 }
 
 .skill-sub-item {
