@@ -32,10 +32,8 @@ html {
   --bg: #16171d;
   --border: #4b4e5b;
   --code-bg: #1f2028;
-  --accent: #91D06C;
-  --accent-bg: rgba(47, 111, 218, .3);
-  --accent-bg-hover: rgba(47, 111, 218, .55);
-  --accent-border: rgba(47, 111, 218, .55);
+  --accent: rgb(145, 208, 108);
+  --accent-border: rgba(145, 208, 108, 0.5);
   --social-bg: rgba(47, 48, 58, 0.5);
   --glass: rgba(255, 255, 255, 0.03);
   --shadow:
@@ -142,18 +140,17 @@ button,
   padding: 1rem 1.5rem;
   border-radius: .75rem;
   background-color: var(--glass);
-  backdrop-filter: blur(16px) brightness(75%);
-  color: var(--text);
-  border: .2rem solid var(--border);
-  box-shadow: 0 .5rem 1rem 0 var(--shadow);
+  backdrop-filter: blur(16px) brightness(10%);
+  color: var(--text-a);
+  border: .2rem solid var(--accent-border);
   text-decoration: none;
 
   transition: all .25s ease-in-out;
 }
 
 .icon-button:hover {
-  color: var(--text-h);
-  border-color: var(--text-h);
+  color: var(--text-a);
+  border-color: var(--text-a);
 }
 
 .row {
@@ -162,6 +159,16 @@ button,
   gap: 1.5rem;
   align-items: baseline;
   flex-wrap: wrap;
+}
+
+.row--nowrap {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  text-wrap: nowrap;
 }
 
 .row-center {
@@ -205,6 +212,8 @@ button,
   gap: 1rem;
   align-items: baseline;
 }
+
+
 
 .date {
   text-wrap: nowrap;

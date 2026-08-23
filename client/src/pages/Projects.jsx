@@ -2,10 +2,36 @@ import { useState } from "react";
 import './projects.css'
 
 export default function Projects() {
+    const [openProject, setOpenProject] = useState(null);
+    const [openTools, setOpenTools] = useState(false);
 
     const projects = [
         {
             id: 1,
+            title: "Grand Forge Games",
+            type: "Website",
+            organization: "Grand Forge Games",
+            descriptor: "Company Website",
+            team: "solo",
+            teamSize: 1,
+            status: "ongoing",
+            madeWith: [
+                "React",
+                "TypeScript",
+                "GitHub",
+                "Inkscape (Logo Design)"
+            ],
+            description: [
+                "The official company website for Grand Forge Games, an independent game studio based in Yorktown, Virginia. It showcases the Grand Forge Games brand, team members, and projects. Users can see content for upcoming games, including slideshows of in-game screenshots, concept art, and other assets. Users can also download playtests and give feedback.",
+                "The visual design is cohesive and responsive, ensuring usability across devices.",
+            ],
+            links: [
+                {text: "View Site", url: "https://grandforgegames.com"},
+                {text: "GitHub Repo", url: "https://github.com/bdutt001/grandforgegames.git"},
+            ]
+        },
+        {
+            id: 2,
             title: "MingleMap",
             type: "Mobile Application",
             organization: "Old Dominion University",
@@ -26,8 +52,7 @@ export default function Projects() {
             description: [
                 "MingleMap is a mobile application that helps people form real-life social connections in nearby public spaces by matching users based on proximity and shared interests.",
                 "Users only see others who are nearby, reducing endless scrolling and encouraging in-person interaction. Each user can set their visibility and select up to 10 interests from a predefined list to guide conversations. Profiles are ranked based on shared interests, prioritizing more relevant matches. Conversations are temporary and automatically disappear once users leave a shared location, reinforcing real-world engagement.",
-                "Users can browse nearby locations, view how many people are present, and see venue details such as category, rating, events, and exclusive offers for MingleMap users.",
-                "Safety features include user reporting, moderation review, and account bans for inappropriate behavior."
+                "Users can browse nearby locations, view how many people are present, and see venue details such as category, rating, events, and exclusive offers for MingleMap users. Safety features include user reporting, moderation review, and account bans for inappropriate behavior."
             ],
             links: [
                 {text: "Demo", url: "https://github.com/bdutt001/f25-Iron.git"},
@@ -36,32 +61,7 @@ export default function Projects() {
             ]
         },
         {
-            id: 2,
-            title: "GrandForgeGames.com",
-            type: "Website",
-            organization: "Grand Forge Games",
-            descriptor: "Official Website",
-            team: "solo",
-            teamSize: 1,
-            status: "ongoing",
-            madeWith: [
-                "React",
-                "TypeScript",
-                "GitHub",
-                "Inkscape (Logo Design)"
-            ],
-            description: [
-                "The official company website for Grand Forge Games, an independent game studio based in Yorktown, Virginia. It showcases the Grand Forge Games brand, team members, and projects. Users can see content for upcoming games, including slideshows of in-game screenshots, concept art, and other assets. Users can also download playtests and give feedback.",
-                "The visual design is cohesive and responsive, ensuring usability across devices.",
-            ],
-            links: [
-                {text: "View Site", url: "https://grandforgegames.com"},
-                {text: "GitHub Repo", url: "https://github.com/bdutt001/grandforgegames.git"},
-            ]
-        },
-        
-        {
-            id: 5,
+            id: 3,
             title: "Employee Monitoring Software",
             type: "Website",
             organization: "Old Dominion University",
@@ -89,7 +89,7 @@ export default function Projects() {
             ]
         },
         {
-            id: 3,
+            id: 4,
             title: "Course Advising Portal",
             type: "Web Application",
             organization: "Old Dominion University",
@@ -116,30 +116,7 @@ export default function Projects() {
                 {text: "View Site", url: "https://course-advising-a2b6e.web.app/login"},
                 {text: "GitHub Repo", url: "https://github.com/bdutt001/cs418518-s26.git"},
             ]
-        },
-        {
-            id: 4,
-            title: "Project Forsaken",
-            type: "PC Game",
-            organization: "Grand Forge Games",
-            descriptor: "Studio Game Project",
-            team: "team",
-            teamSize: 13,
-            status: "ongoing",
-            madeWith: [
-                "Unreal Engine 5.7",
-                "C++",
-                "Diversion",
-                "Maya",
-            ],
-            description: [
-                "Forsaken is a single-player, open-world action RPG centered around visceral combat, exploration, and meaningful player choice."
-            ],
-            links: [
-                {text: "View Site", url: "https://grandforgegames.com/forsaken"},
-            ]
-        },
-        
+        },        
     ];
 
     const [filters, setFilters] = useState({
@@ -149,18 +126,22 @@ export default function Projects() {
     });
 
     const filteredProjects = projects.filter(project => {
-        return (
+    return (
             (filters.organization === "all" || project.organization === filters.organization) &&
             (filters.team === "all" || project.team === filters.team) &&
             (filters.status === "all" || project.status === filters.status)
         );
     });
 
+    const sortedProjects = [...filteredProjects].sort((a, b) => {
+        if (a.id === openProject) return -1;
+        if (b.id === openProject) return 1;
+        return 0;
+    });
+
     return (
         <div>
             <div className="projects">
-                
-
                 <div className="row">
                     <h1>Projects</h1>
                     <select onChange={(e) => setFilters({ ...filters, organization: e.target.value })}>
@@ -176,54 +157,86 @@ export default function Projects() {
                     </select>
                 </div>
 
-                <div className="projectList">
-                    {filteredProjects.map((project) => (
-                        <div className="project" key={project.id}>
-                            <div className="project-header">
+                <div className="projects__list">
+                    {sortedProjects.map((project) => (
+                        <div
+                            className={`project ${openProject === project.id ? "open" : ""}`}
+                            key={project.id}
+                            onClick={() =>
+                                setOpenProject(
+                                    openProject === project.id ? null : project.id
+                                )
+                            }
+                        >
+                            <div className="project__header">
                                 <div className="col">
                                     <h2>{project.title}</h2>
-                                    <div className="row">
+                                    <div className={`${openProject === project.id ? "row--nowrap" : "col"}`}>
                                         <h3>{project.organization}</h3>
                                         <p>{project.descriptor}</p>
                                     </div>
                                 </div>
-                                <div className="row">
-                                    <p className="tag">{project.type}</p>
-                                    <p className="tag">
+                                <div className={`tags ${openProject === project.id ? "open" : ""}`}>
+                                    <p className="row--nowrap tag">{project.type}</p>
+                                    <p className="row--nowrap tag">
                                         {project.team === "solo" ? "Solo" : `Team (${project.teamSize})`}
                                     </p>
-                                    <p className={`tag ${project.status === "ongoing" ? "ongoing" : ""}`}>
+                                    <p className={`row--nowrap tag ${project.status === "ongoing" ? "ongoing" : ""}`}>
                                         {project.status === "ongoing" ? "Ongoing" : "Completed"}
                                     </p>
                                 </div>
                             </div>
-                            {project.description.map((text, i) => (
-                                <p key={i}>{text}</p>
-                            ))}
-                            {project.links && project.links.length > 0 && (
-                                <div className="row">
-                                    {project.links.map((link, index) => (
-                                        <a
-                                            key={index}
-                                            href={link.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="icon-button"
+                            
+                            <div    
+                                className={`expandable-wrapper ${
+                                    openProject === project.id ? "open" : ""
+                                }`}
+                            >
+                                <div className="expandable-content">
+                                    {project.links && project.links.length > 0 && (
+                                        <div className="row">
+                                            {project.links.map((link, index) => (
+                                                <a
+                                                    key={index}
+                                                    href={link.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="icon-button"
+                                                >
+                                                    {link.text}
+                                                </a>
+                                            ))}
+                                        </div>
+                                    )}
+                                    <div className="project__description">
+                                        {project.description.map((text, i) => (
+                                            <p key={i}>{text}</p>
+                                        ))}
+                                    </div>
+                                    
+                                    <div className="col list">
+                                        <h4 onClick={(e) => {
+                                            e.stopPropagation();
+                                            setOpenTools(prev => !prev);
+                                        }}>
+                                            Technologies {openTools ? "⌃" : "⌄"}
+                                        </h4>
+                                        <div    
+                                            className={`expandable-wrapper tools ${
+                                                openTools ? "open" : ""
+                                            }`}
                                         >
-                                            {link.text}
-                                        </a>
-                                    ))}
+                                            <div className="expandable-content tools">
+                                                <ul className="made-with">
+                                                    {project.madeWith.map((tech, index) => (
+                                                        <li key={index}>{tech}</li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            )}
-                            <div className="col list">
-                                <h4>Made With:</h4>
-                                <ul className="made-with">
-                                    {project.madeWith.map((tech, index) => (
-                                        <li key={index}>{tech}</li>
-                                    ))}
-                                </ul>
                             </div>
-                    
                         </div>
                     ))}
                 </div>
