@@ -63,7 +63,7 @@ export default function Projects() {
         {
             id: 3,
             title: "Employee Monitoring Software",
-            type: "Website",
+            type: "Web Application",
             organization: "Old Dominion University",
             descriptor: "COMM305 Literature Review Presentation",
             team: "solo",
@@ -81,7 +81,7 @@ export default function Projects() {
             ],
             description: [
                 "A full-stack web application that presents a literature review on employee monitoring software.",
-                "Features include tracking session and global activity, including actions (mouse movements and clicks) and idle time.",
+                "The site tracks actions (mouse movements and clicks) and idle time within your session. These metrics are recorded in the database in order to calculate and display global counts."
             ],
             links: [
                 {text: "View Site", url: "https://bdutt001.github.io/ems-presentation/"},
@@ -170,7 +170,7 @@ export default function Projects() {
                         >
                             <div className="project__header">
                                 <div className="col">
-                                    <h2>{project.title}</h2>
+                                    <h2 className="project__title">{project.title}</h2>
                                     <div className={`${openProject === project.id ? "row--nowrap" : "col"}`}>
                                         <h3>{project.organization}</h3>
                                         <p>{project.descriptor}</p>
@@ -188,11 +188,16 @@ export default function Projects() {
                             </div>
                             
                             <div    
-                                className={`expandable-wrapper ${
+                                className={`expandable-wrapper__projects ${
                                     openProject === project.id ? "open" : ""
                                 }`}
                             >
-                                <div className="expandable-content">
+                                <div className="expandable-content__projects">
+                                    <div className="project__description">
+                                        {project.description.map((text, i) => (
+                                            <p key={i}>{text}</p>
+                                        ))}
+                                    </div>
                                     {project.links && project.links.length > 0 && (
                                         <div className="row">
                                             {project.links.map((link, index) => (
@@ -207,26 +212,23 @@ export default function Projects() {
                                                 </a>
                                             ))}
                                         </div>
-                                    )}
-                                    <div className="project__description">
-                                        {project.description.map((text, i) => (
-                                            <p key={i}>{text}</p>
-                                        ))}
-                                    </div>
-                                    
+                                    )} 
                                     <div className="col list">
-                                        <h4 onClick={(e) => {
-                                            e.stopPropagation();
-                                            setOpenTools(prev => !prev);
-                                        }}>
+                                        <h4 
+                                            className="tools__toggle"
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                setOpenTools(prev => !prev);
+                                            }}
+                                        >
                                             Technologies {openTools ? "⌃" : "⌄"}
                                         </h4>
                                         <div    
-                                            className={`expandable-wrapper tools ${
+                                            className={`expandable-wrapper__tools ${
                                                 openTools ? "open" : ""
                                             }`}
                                         >
-                                            <div className="expandable-content tools">
+                                            <div className="expandable-content__tools">
                                                 <ul className="made-with">
                                                     {project.madeWith.map((tech, index) => (
                                                         <li key={index}>{tech}</li>

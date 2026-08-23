@@ -98,7 +98,6 @@ h2 {
 h3 {
   font-size: 1.1rem;
   line-height: 110%;
- 
 }
 
 p,
@@ -133,14 +132,15 @@ a:hover {
 }
 
 button,
-.icon-button {
+.icon-button,
+.icon-button--small {
   font-size: 1.1rem;
   font-weight: 600;
   max-width: fit-content;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1rem;
   border-radius: .75rem;
-  background-color: var(--glass);
-  backdrop-filter: blur(16px) brightness(10%);
+  background-color: transparent;
+  backdrop-filter: blur(16px);
   color: var(--text-a);
   border: .2rem solid var(--accent-border);
   text-decoration: none;
@@ -148,7 +148,12 @@ button,
   transition: all .25s ease-in-out;
 }
 
-.icon-button:hover {
+.icon-button--small {
+  font-size: 1rem;
+}
+
+.icon-button:hover,
+.icon-button--small:hover {
   color: var(--text-a);
   border-color: var(--text-a);
 }
@@ -202,7 +207,6 @@ button,
   justify-content: space-between;
   gap: 2rem;
   padding: 0 0;
-  line-height: 100%;
   flex-wrap: wrap;
 }
 
@@ -519,4 +523,10 @@ p {
   gap: .35rem;
   flex-wrap: nowrap;
   white-space: nowrap;
+}
+
+.cols {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  gap: 25rem;
 }

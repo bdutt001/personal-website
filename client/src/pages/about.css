@@ -10,7 +10,7 @@
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1.1fr 1fr .8fr;
+  grid-template-columns: 1fr 1fr .8fr;
   gap: 3rem;
 
   
@@ -89,6 +89,29 @@
   backdrop-filter: blur(16px) brightness(75%);
 }
 
+.timeline-item,
+.skill-item {
+  cursor: pointer;
+}
+
+.skill-item {
+  gap: 0rem;
+}
+
+.skill-item.open {
+  gap: 1rem;
+}
+
+.timeline-item:hover,
+.skill-item:hover {
+  border: .2rem solid var(--text);
+}
+
+.timeline-item:hover .expand-prompt,
+.skill-item:hover .expand-prompt {
+  color: var(--text-h);
+}
+
 .skill-sub-item {
   display: flex;
   flex-direction: column;
@@ -103,6 +126,41 @@
 .ed-item {
   min-width: 0;
 }
+.expandable-wrapper__job {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.expandable-wrapper__job.open {
+  max-height: 500px;
+}
+
+.expandable-content__job {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: 0;
+}
+
+.expandable-wrapper__skill {
+  padding: 0 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.expandable-wrapper__skill.open {
+  max-height: 500px;
+}
+
+.expandable-content__skill {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: 0;
+}
+
 
 @media (max-width: 1100px) {
     .about {
