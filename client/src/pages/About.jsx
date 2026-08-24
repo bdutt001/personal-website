@@ -69,6 +69,8 @@ export default function About()  {
                                 <p>Norfolk, Virginia</p>
                             </div>
                             <p>Contributing to mission-critical software</p>
+
+                            
                             <div    
                                 className={`expandable-wrapper__job ${
                                     openJob === "wr" ? "open" : ""
@@ -95,7 +97,7 @@ export default function About()  {
                                     </ul>
                                 </div>
                             </div>
-                            
+                            <h2 className='arrow-center'>{openJob === "wr" ? "⌃" : "⌄"}</h2>
                         </div>
                         <div 
                             id="job--gfg" 
@@ -146,14 +148,12 @@ export default function About()  {
                                     </ul>
                                 </div>
                             </div>
+                            <h2 className='arrow-center'>{openJob === "gfg" ? "⌃" : "⌄"}</h2>
                         </div>
                     </div>
                 </div>
                 <div className="about-col">
-                    <div className="row-apart">
-                        <h1>Skills</h1>
-                        <p>Years of Experience</p>
-                    </div>
+                    <h1>Skills</h1>
                     <div className="skills">
                         <div 
                             id="skill--languages" 
@@ -162,50 +162,72 @@ export default function About()  {
                                 setOpenSkill(openSkill === "languages" ? null : "languages")
                             }
                         >
-                            <div className='row-apart'>
-                                <h2>Programming Languages</h2>
-                                <h2>{openSkill === "languages" ? "⌃" : "⌄"}</h2>
-                            </div>
+                            <h2>Programming Languages</h2>
                             <div 
                                 className={`expandable-wrapper__skill ${
                                     openSkill === "languages" ? "open" : ""
                                 }`}
                             >
                                 <div className='expandable-content__skill'>
-                                    <ul>
-                                        <li>
-                                            <div className="row-apart">
-                                                <p>Java</p>
-                                                <p>9</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="row-apart">
-                                                <p>C++</p>
-                                                <p>7</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="row-apart">
-                                                <p>Python</p>
-                                                <p>3</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="row-apart">
-                                                <p>JavaScript</p>
-                                                <p>2</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="row-apart">
-                                                <p>TypeScript</p>
-                                                <p>1</p>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <div className='skill-sub-item'>
+                                        <div className='row-apart'>
+                                            <h3 style={{color: "#9ca3af"}}>Programming</h3>
+                                            <h3 style={{color: "#9ca3af"}}>Years Experience</h3>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <div className="row-apart">
+                                                    <p>Java</p>
+                                                    <p>9</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="row-apart">
+                                                    <p>C++</p>
+                                                    <p>7</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                        
+                                    <div className='skill-sub-item'>
+                                        <h3 style={{color: "#9ca3af"}}>Scripting</h3>
+                                        <ul>
+                                            <li>
+                                                <div className="row-apart">
+                                                    <p>Python</p>
+                                                    <p>3</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="row-apart">
+                                                    <p>JavaScript</p>
+                                                    <p>2</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="row-apart">
+                                                    <p>TypeScript</p>
+                                                    <p>1</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="row-apart">
+                                                    <p>Bash</p>
+                                                    <p>1</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="row-apart">
+                                                    <p>Lua</p>
+                                                    <p>{"<"}1</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
+                            <h2 className='arrow-center'>{openSkill === "languages" ? "⌃" : "⌄"}</h2>
                         </div>
                         <div 
                             id="skill--web"
@@ -214,10 +236,7 @@ export default function About()  {
                                 setOpenSkill(openSkill === "web" ? null : "web")
                             }
                         >
-                            <div className='row-apart'>
-                                <h2>Web & Mobile Development</h2>
-                                <h2>{openSkill === "web" ? "⌃" : "⌄"}</h2>
-                            </div>
+                            <h2>Web & Mobile Development</h2>
                             <div 
                                 className={`expandable-wrapper__skill ${
                                     openSkill === "web" ? "open" : ""
@@ -225,7 +244,10 @@ export default function About()  {
                             >
                                 <div className='expandable-content__skill'>
                                     <div className="skill-sub-item">
-                                        <h3 style={{color: "#9ca3af"}}>Frontend</h3>
+                                        <div className='row-apart'>
+                                            <h3 style={{color: "#9ca3af"}}>Frontend</h3>
+                                            <h3 style={{color: "#9ca3af"}}>Years Experience</h3>
+                                        </div>
                                         <ul>
                                             <li>
                                                 <div className="row-apart">
@@ -283,6 +305,7 @@ export default function About()  {
                                     </div>
                                 </div>
                             </div>
+                            <h2 className='arrow-center'>{openSkill === "web" ? "⌃" : "⌄"}</h2>
                         </div>
                         <div
                             id="skill--databases" 
@@ -291,10 +314,7 @@ export default function About()  {
                                 setOpenSkill(openSkill === "databases" ? null : "databases")
                             }
                         >
-                            <div className='row-apart'>
-                                <h2>Databases</h2>
-                                <h2>{openSkill === "databases" ? "⌃" : "⌄"}</h2>
-                            </div>
+                            <h2>Databases</h2>
                             <div 
                                 className={`expandable-wrapper__skill ${
                                     openSkill === "databases" ? "open" : ""
@@ -302,7 +322,10 @@ export default function About()  {
                             >
                                 <div className='expandable-content__skill'>
                                     <div className="skill-sub-item">
-                                        <h3 style={{color: "#9ca3af"}}>Databases</h3>
+                                        <div className='row-apart'>
+                                            <h3 style={{color: "#9ca3af"}}>Databases</h3>
+                                            <h3 style={{color: "#9ca3af"}}>Years Experience</h3>
+                                        </div>
                                         <ul>
                                             <li>
                                                 <div className="row-apart">
@@ -331,6 +354,7 @@ export default function About()  {
                                     </div>
                                 </div>
                             </div>
+                            <h2 className='arrow-center'>{openSkill === "databases" ? "⌃" : "⌄"}</h2>
                         </div>
                         <div
                             id="skill--tools" 
@@ -339,10 +363,7 @@ export default function About()  {
                                 setOpenSkill(openSkill === "tools" ? null : "tools")
                             }
                         >
-                            <div className='row-apart'>
-                                <h2>Developer Tools</h2>
-                                <h2>{openSkill === "tools" ? "⌃" : "⌄"}</h2>
-                            </div>
+                            <h2>Developer Tools</h2>
                             <div 
                                 className={`expandable-wrapper__skill ${
                                     openSkill === "tools" ? "open" : ""
@@ -350,7 +371,10 @@ export default function About()  {
                             >
                                 <div className='expandable-content__skill'>
                                     <div className="skill-sub-item">
-                                        <h3 style={{color: "#9ca3af"}}>Version Control</h3>
+                                        <div className='row-apart'>
+                                            <h3 style={{color: "#9ca3af"}}>Version Control</h3>
+                                            <h3 style={{color: "#9ca3af"}}>Years Experience</h3>
+                                        </div>
                                         <ul>
                                             <li>
                                                 <div className="row-apart">
@@ -408,6 +432,7 @@ export default function About()  {
                                     </div>
                                 </div>
                             </div>
+                            <h2 className='arrow-center'>{openSkill === "tools" ? "⌃" : "⌄"}</h2>
                         </div>
                         <div
                             id="skill--management" 
@@ -418,7 +443,7 @@ export default function About()  {
                         >
                             <div className='row-apart'>
                                 <h2>Project Management</h2>
-                                <h2>{openSkill === "management" ? "⌃" : "⌄"}</h2>
+                                
                             </div>
                             <div 
                                 className={`expandable-wrapper__skill ${
@@ -427,7 +452,10 @@ export default function About()  {
                             >
                                 <div className='expandable-content__skill'>
                                     <div className="skill-sub-item">
-                                        <h3 style={{color: "#9ca3af"}}>Methodologies</h3>
+                                        <div className='row-apart'>
+                                            <h3 style={{color: "#9ca3af"}}>Methodologies</h3>
+                                            <h3 style={{color: "#9ca3af"}}>Years Experience</h3>
+                                        </div>
                                         <ul>
                                             <li>
                                                 <div className="row-apart">
@@ -462,6 +490,7 @@ export default function About()  {
                                     </div>
                                 </div>
                             </div>
+                            <h2 className='arrow-center'>{openSkill === "management" ? "⌃" : "⌄"}</h2>
                         </div>
                     </div>
                 </div>

@@ -10,7 +10,7 @@
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr .8fr;
+  grid-template-columns: .8fr 1fr auto;
   gap: 3rem;
 
   
@@ -92,10 +92,11 @@
 .timeline-item,
 .skill-item {
   cursor: pointer;
+  transition: border-color 0.5s ease-out;
 }
 
 .skill-item {
-  gap: 0rem;
+  gap: .5rem;
 }
 
 .skill-item.open {
@@ -107,8 +108,8 @@
   border: .2rem solid var(--text);
 }
 
-.timeline-item:hover .expand-prompt,
-.skill-item:hover .expand-prompt {
+.timeline-item:hover .arrow-center,
+.skill-item:hover .arrow-center {
   color: var(--text-h);
 }
 
@@ -126,6 +127,15 @@
 .ed-item {
   min-width: 0;
 }
+
+.arrow-center {
+  color: var(--text);
+  padding: 0;
+  align-self: center;
+  line-height: 0%;
+  transition: color 0.5s ease-out;
+}
+
 .expandable-wrapper__job {
   max-height: 0;
   overflow: hidden;
@@ -145,6 +155,7 @@
 
 .expandable-wrapper__skill {
   padding: 0 0;
+  
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-out;

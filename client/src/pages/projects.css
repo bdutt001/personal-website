@@ -32,6 +32,7 @@
   backdrop-filter: blur(16px) brightness(75%);
 
   align-self: start;
+  transition: border-color 0.5s ease-out;
 }
 
 .project:hover {
@@ -69,6 +70,7 @@
 
 .tools__toggle {
   color: var(--text);
+  transition: color 0.5s ease-out;
 }
 
 .tools__toggle:hover {

@@ -52,7 +52,7 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  
   @media (max-width: 1024px) {
     font-size: 16px;
   }
@@ -124,11 +124,14 @@ ul {
 
 a {
   color: var(--text-a);
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: color 0.5s ease-out;
 }
 
 a:hover {
   text-decoration: underline;
+  text-decoration-color: #91D06C;
 }
 
 button,
