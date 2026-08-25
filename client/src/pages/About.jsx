@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 export default function About()  {
     const [openJob, setOpenJob] = useState(null);
     const [openSkill, setOpenSkill] = useState(null);
+    const [openSchool, setOpenSchool] = useState(null);
 
     const [isTouch, setIsTouch] = useState(false);
 
@@ -22,7 +23,13 @@ export default function About()  {
                 <div className="about-col">
                     <h1>Education</h1>
                     <div className="education">
-                        <div className="ed-item">
+                        <div 
+                            id="school--odu"
+                            className="ed-item"
+                            onClick={() =>
+                                setOpenSchool(openSchool === "odu" ? null : "odu")
+                            }
+                        >
                             <div className="row-apart">
                                 <h2>B.S. in Computer Science</h2>
                                 <p className="date">May 2026</p>
@@ -31,12 +38,25 @@ export default function About()  {
                                 <h3>Old Dominion University</h3>
                                 <p>Norfolk, Virginia</p>
                             </div>
-                            <div>
-                                <p>GPA: 3.11</p>
-                                <p>In-Major GPA: 3.73</p>
+                            <div    
+                                className={`expandable-wrapper__job ${
+                                    openSchool === "odu" ? "open" : ""
+                                }`}
+                            >
+                                <div className='expandable-content__job'>
+                                    <p>GPA: 3.11</p>
+                                    <p>In-Major GPA: 3.73</p>
+                                </div>
                             </div>
+                            <h2 className='arrow-center'>{openSchool === "odu" ? "⌃" : "⌄"}</h2>
                         </div>
-                         <div className="ed-item">
+                         <div
+                            id="school--wbhs"
+                            className="ed-item"
+                            onClick={() =>
+                                setOpenSchool(openSchool === "wbhs" ? null : "wbhs")
+                            }
+                        >
                             <div className="row-apart">
                                 <h2>Advanced Diploma</h2>
                                 <p className="date">May 2019</p>
@@ -45,7 +65,16 @@ export default function About()  {
                                 <h3>Western Branch High School</h3>
                                 <p>Chesapeake, Virginia</p>
                             </div>
-                            <p>GPA: 4.67</p>
+                            <div    
+                                className={`expandable-wrapper__job ${
+                                    openSchool === "wbhs" ? "open" : ""
+                                }`}
+                            >
+                                <div className='expandable-content__job'>
+                                    <p>GPA: 4.67</p>
+                                </div>
+                            </div>
+                            <h2 className='arrow-center'>{openSchool === "wbhs" ? "⌃" : "⌄"}</h2>
                         </div>
                     </div>
                     

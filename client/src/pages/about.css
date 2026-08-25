@@ -90,7 +90,8 @@
 }
 
 .timeline-item,
-.skill-item {
+.skill-item,
+.ed-item {
   cursor: pointer;
   transition: border-color 0.5s ease-out;
 }
@@ -104,12 +105,14 @@
 }
 
 .timeline-item:hover,
-.skill-item:hover {
+.skill-item:hover,
+.ed-item:hover {
   border: .2rem solid var(--text);
 }
 
 .timeline-item:hover .arrow-center,
-.skill-item:hover .arrow-center {
+.skill-item:hover .arrow-center,
+.ed-item:hover .arrow-center {
   color: var(--text-h);
 }
 

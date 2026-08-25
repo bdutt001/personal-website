@@ -181,3 +181,15 @@ select:hover {
   align-items: start;
   margin: 0 0;
 }
+
+.arrow-center {
+  color: var(--text);
+  padding: 0;
+  align-self: center;
+  line-height: 0%;
+  transition: color 0.5s ease-out;
+}
+
+.project:hover .arrow-center{
+  color: var(--text-h);
+}

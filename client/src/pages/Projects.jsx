@@ -168,7 +168,9 @@ export default function Projects() {
                                 )
                             }
                         >
+                            <h2 className='arrow-center'>{openProject === project.id ? "⌄" : "⌃"}</h2>
                             <div className="project__header">
+                                
                                 <div className="col">
                                     <h2 className="project__title">{project.title}</h2>
                                     <div className={`${openProject === project.id ? "row--nowrap" : "col"}`}>
