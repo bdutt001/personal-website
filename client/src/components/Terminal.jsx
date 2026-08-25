@@ -1,10 +1,12 @@
 import './terminal.css';
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import TypingText from "./TypingText"
 
 export default function Terminal() {
     const [input, setInput] = useState("")
+    const terminalRef = useRef(null)
+
 
     const [lines, setLines] = useState([
         {
@@ -16,6 +18,13 @@ export default function Terminal() {
     ])
 
     const [bootComplete, setBootComplete] = useState(false)
+
+    useEffect(() => {
+        if (terminalRef.current) {
+            terminalRef.current.scrollTop = terminalRef.current.scrollHeight
+        }
+    }, [lines])
+
 
     useEffect(() => {
         
@@ -102,7 +111,7 @@ export default function Terminal() {
     }
 
     return (
-        <div className="terminal">
+        <div className="terminal" ref={terminalRef}>
 
             {lines.map((line) => {
                 if (line.type === "command") {

@@ -260,9 +260,9 @@ p {
   box-shadow: 0 .5rem 1rem 0 var(--shadow);
 
   transition:
-    width .25s ease-in-out,
-    transform .2s ease-in-out,
-    border-color .2s ease-in-out;
+    width 1s ease-in-out,
+    transform .5s ease-in-out,
+    border-color .5s ease-in-out;
 }
 
 .social-button:hover {

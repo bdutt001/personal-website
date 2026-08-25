@@ -1,5 +1,5 @@
 .typing {
-  --speed: 0.1s;
+  --speed: 0.2s;
 
   font-family: "JetBrains Mono", monospace;
   width: 0;
@@ -15,7 +15,7 @@
     cursor-hide 0s linear forwards;
 
   animation-delay:
-    0s,
+    0.5s,
     calc(var(--chars) * var(--speed));
 }
 
