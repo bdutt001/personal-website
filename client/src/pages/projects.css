@@ -42,6 +42,7 @@
 .project__header {
   display: flex;
   flex-direction: row;
+  gap: 1rem;
   justify-content: space-between;
   place-items: top;
   align-items: top;

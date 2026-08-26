@@ -10,7 +10,7 @@
 
 .about-grid {
   display: grid;
-  grid-template-columns: .8fr 1fr auto;
+  grid-template-columns: auto auto auto;
   gap: 3rem;
 
   
@@ -79,7 +79,7 @@
 .contact-item {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: .75rem;
   margin-right: 1rem;
 
   padding: 2rem 2rem;
@@ -97,11 +97,7 @@
 }
 
 .skill-item {
-  gap: .5rem;
-}
-
-.skill-item.open {
-  gap: 1rem;
+  gap: .75rem;
 }
 
 .timeline-item:hover,
