@@ -1,6 +1,6 @@
 # Developer Portfolio
 
-https://bdutt001.github.io/personal-website
+https://bdutt001.github.io/portfolio
 
 This developer portfolio is a static site made with React. 
 
