@@ -11,7 +11,7 @@
 .about-grid {
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 3rem;
+  gap: 2.5rem;
 
   
   min-height: 100%;
@@ -169,6 +169,11 @@
   flex-direction: column;
   gap: .5rem;
   padding: 0;
+}
+
+.about-link {
+  display: flex;
+  justify-content: flex-end;
 }
 
 

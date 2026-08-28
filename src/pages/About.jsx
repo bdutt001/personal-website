@@ -38,14 +38,29 @@ export default function About()  {
                                 <h3>Old Dominion University</h3>
                                 <p>Norfolk, Virginia</p>
                             </div>
+                            <div className='row-apart'>
+                                <p>Studied coding fundamentals</p>
+                                <a
+                                    href="/portfolio/odu-diploma.pdf"
+                                    target="_blank"
+                                    rel="noopener"
+                                    onClick={(e) => e.stopPropagation()}
+                                    className='about-link'
+                                >
+                                    View Diploma ↗
+                                </a>
+                            </div>
                             <div    
                                 className={`expandable-wrapper__job ${
                                     openSchool === "odu" ? "open" : ""
                                 }`}
                             >
                                 <div className='expandable-content__job'>
-                                    <p>GPA: 3.11</p>
-                                    <p>In-Major GPA: 3.73</p>
+                                    <h3 style={{color: "#9ca3af"}}>GPA</h3> 
+                                    <ul>
+                                        <li>3.11</li>
+                                        <li>3.73 (In-Major)</li>
+                                    </ul>
                                 </div>
                             </div>
                             <h2 className='arrow-center'>{openSchool === "odu" ? "⌃" : "⌄"}</h2>
@@ -98,8 +113,6 @@ export default function About()  {
                                 <p>Norfolk, Virginia</p>
                             </div>
                             <p>Contributing to mission-critical software</p>
-
-                            
                             <div    
                                 className={`expandable-wrapper__job ${
                                     openJob === "wr" ? "open" : ""
@@ -151,7 +164,7 @@ export default function About()  {
                                     rel="noopener noreferrer"
                                     onClick={(e) => e.stopPropagation()}
                                 >
-                                    View Site
+                                    View Site ↗
                                 </a>
                             </div>
                             <div    
