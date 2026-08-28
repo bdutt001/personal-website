@@ -144,7 +144,7 @@ export default function Projects() {
             <div className="projects">
                 <div className="row">
                     <h1>Projects</h1>
-                    <select onChange={(e) => setFilters({ ...filters, organization: e.target.value })}>
+                    {/* <select onChange={(e) => setFilters({ ...filters, organization: e.target.value })}>
                         <option value="all">All Organizations</option>
                         <option value="Grand Forge Games">Grand Forge Games</option>
                         <option value="Old Dominion University">Old Dominion University</option>
@@ -154,7 +154,10 @@ export default function Projects() {
                         <option value="all">All Work Types</option>
                         <option value="solo">Solo</option>
                         <option value="team">Team</option>
-                    </select>
+                    </select> */}
+                    <div className="filters">
+                        
+                    </div>
                 </div>
 
                 <div className="projects__list">

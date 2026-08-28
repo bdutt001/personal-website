@@ -477,6 +477,17 @@ export default function About()  {
                                             </li>
                                         </ul>
                                     </div>
+                                    <div className="skill-sub-item">
+                                        <h3 style={{color: "#9ca3af"}}>Documentation</h3>
+                                        <ul>
+                                            <li>
+                                                <div className="row-apart">
+                                                    <p>Markdown</p>
+                                                    <p>2</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <h2 className='arrow-center'>{openSkill === "management" ? "⌃" : "⌄"}</h2>
