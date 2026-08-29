@@ -57,10 +57,8 @@ export default function About()  {
                             >
                                 <div className='expandable-content__job'>
                                     <h3 style={{color: "#9ca3af"}}>GPA</h3> 
-                                    <ul>
-                                        <li>3.11</li>
-                                        <li>3.73 (In-Major)</li>
-                                    </ul>
+                                    <p>3.11</p>
+                                    <p>3.73 (in-major)</p>
                                 </div>
                             </div>
                             <h2 className='arrow-center'>{openSchool === "odu" ? "⌃" : "⌄"}</h2>
@@ -86,7 +84,8 @@ export default function About()  {
                                 }`}
                             >
                                 <div className='expandable-content__job'>
-                                    <p>GPA: 4.67</p>
+                                    <h3 style={{color: "#9ca3af"}}>GPA</h3> 
+                                    <p>4.67</p>
                                 </div>
                             </div>
                             <h2 className='arrow-center'>{openSchool === "wbhs" ? "⌃" : "⌄"}</h2>

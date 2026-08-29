@@ -19,6 +19,10 @@
     0 0 40px var(--shadow);
 }
 
+.output {
+  margin-bottom: 1rem;
+}
+
 .ascii {
   font-family: "JetBrains Mono", monospace;
 
@@ -72,12 +76,15 @@
 
 .terminal-input-line {
   align-items: center;
-  gap: 1rem;
-
+  gap: .5rem;
   flex-wrap: nowrap;
 }
 
+
 .terminal-input {
+  flex: 1;
+  min-width: 0;
+
   background: transparent;
   border: none;
   outline: none;
@@ -86,9 +93,9 @@
 
   font-family: "JetBrains Mono", monospace;
   font-size: inherit;
-
-  width: 100%;
 }
+
+
 
 .terminal-welcome {
   display: flex;

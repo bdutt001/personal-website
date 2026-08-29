@@ -11,7 +11,7 @@ export default function Header() {
           <img src={Icon} className="header__icon"/>
           <div className="header__column">
             <h1>Benjamin Dutton</h1>
-            <p>Software Engineer and Web Developer</p>
+            <p>Software Engineer & Web Developer</p>
           </div>
         </div>
         <Nav />

@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, .4fr);
   text-align: left;
-  gap: 4rem;
+  gap: 5rem;
 }
 
 .landing {
