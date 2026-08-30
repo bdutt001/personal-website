@@ -13,3 +13,10 @@
 
   flex-shrink: 0;
 }
+
+.copyright {
+  display: flex;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  justify-self: flex-start;
+}
